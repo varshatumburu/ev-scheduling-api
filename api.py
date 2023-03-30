@@ -107,4 +107,4 @@ def schedule_request():
         return json.dumps({"id": new_idx,"success":flag, "message":"request denied"})
 
 if __name__ == '__main__':
-    app.run(host='172.16.26.67', debug = True, port=8054)
+    app.run(debug = True)

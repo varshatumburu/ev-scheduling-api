@@ -1,19 +1,8 @@
-import requests, urllib.parse
-import plotly.graph_objects as go
-import osmnx as ox
-from math import asin,cos,pi,sin
-import pandas as pd
-import networkx as nx
-from queue import PriorityQueue, Queue
 import math, sys
-from geopy.geocoders import Nominatim
 
 sys.path.insert(1, '/home/varsha_1901cs69/btp/scheduling/modules')
 import config, matching
-from scheduler import prebooked_scheduling, SLOT_TIME
-
-mapbox_access_token = "pk.eyJ1IjoiaGFyc2hqaW5kYWwiLCJhIjoiY2tleW8wbnJlMGM4czJ4b2M0ZDNjeGN4ZyJ9.XXPg4AsUx0GUygvK8cxI6g"
-geolocator = Nominatim(user_agent="Slot Scheduling App")
+from scheduler import SLOT_TIME
 
 def roundup(x):
     return int(math.ceil(x / SLOT_TIME)) * int(SLOT_TIME)
