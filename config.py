@@ -1,6 +1,7 @@
 # contains all the configurable variables to maintain state of user
 
 import pandas as pd
+import sys, os
 
 CENTER = None
 CHARGING_STATIONS=pd.DataFrame()
@@ -8,7 +9,7 @@ CS_DROPDOWN = pd.DataFrame(columns = ['label','value'])
 CS_NODES = []
 CS_POSITIONS = []
 COLUMNS = []
-DATASET = "D:\Sem8\Btp\ev-scheduling-api\datasets"
+DATASET = os.path.join(sys.path[0], 'datasets')
 GRAPH = None
 # LOCATION = geolocator.geocode("India",timeout=None)
 N_CLICKS = 0

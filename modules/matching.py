@@ -1,11 +1,11 @@
-import json, datetime, math, sys
+import json, datetime, math, sys, os
 import pandas as pd
 
-sys.path.insert(1, 'D:\Sem8\Btp\ev-scheduling-api\modules')
+sys.path.insert(1, os.path.join(sys.path[0], 'modules'))
 from scheduler import prebooked_scheduling, SLOT_TIME
 import helper
 
-sys.path.insert(2, 'D:\Sem8\Btp\ev-scheduling-api')
+sys.path.insert(2, sys.path[0])
 import config
 
 global_requests = json.load(open(config.DATASET + "/base_requests.json"))

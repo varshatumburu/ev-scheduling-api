@@ -1,6 +1,6 @@
-import math, sys
+import math, sys, os
 
-sys.path.insert(1, '/home/varsha_1901cs69/btp/scheduling/modules')
+sys.path.insert(1, os.path.join(sys.path[0], 'modules'))
 import config, matching
 from scheduler import SLOT_TIME
 

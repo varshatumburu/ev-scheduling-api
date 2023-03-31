@@ -12,16 +12,19 @@ app = Flask(__name__)
 
 @app.post("/")
 def schedule_request():
-    if request.is_json:
+    try:
         request_data = request.get_json()
 
-    start_time = request_data['start_time']
-    end_time = request_data['end_time']
-    cs_queue = request_data['cs_queue']
-    soc = request_data['soc']
-    vehicle_type = request_data['vehicle_type']
-    bcap = request_data['battery_capacity']
-    mileage = request_data['mileage']
+        start_time = request_data['start_time']
+        end_time = request_data['end_time']
+        cs_queue = request_data['cs_queue']
+        soc = request_data['soc']
+        vehicle_type = request_data['vehicle_type']
+        bcap = request_data['battery_capacity']
+        mileage = request_data['mileage']
+    
+    except: 
+        json.dumps({"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
 
     # retrieve already scheduled info/ datasets
     existing_requests = pd.read_json('datasets/requests.json')
@@ -40,7 +43,11 @@ def schedule_request():
         existing_pslots[port] = {int(k):v for k,v in val.items()}
 
     # try to fit new request
-    new_idx = max(existing_requests['index'])+1
+    try:
+        new_idx = max(existing_requests['index'])+1
+    except:
+        new_idx = 0
+
     new_request = pd.DataFrame(data={
             "index": new_idx,
 			"start_time": start_time,
@@ -58,11 +65,16 @@ def schedule_request():
     config.SLOT_MAPPING = existing_schedule
     config.POSSIBLE_SLOTS = existing_pslots
     flag=0
+    if len(cs_queue)==0:
+        return json.dumps({"Error":"Scheduling Error", "Message":"No ports given in priority to schedule charging"})
     while len(cs_queue)!=0:
         port_id = cs_queue.pop(0)
-        
         csno, portno = int(port_id.split('p')[0]), int(port_id.split('p')[1])
-        charging_port = charging_stations.to_dict("records")[csno]["ports"][portno]
+        
+        try:
+            charging_port = charging_stations.to_dict("records")[csno]["ports"][portno]
+        except:
+            return json.dumps({"Error":"Index Error", "Message":"Charging station/ports out of index range"})
 
         stime = helper.roundup(start_time)
         duration = helper.find_duration(charging_port['power'], bcap)
