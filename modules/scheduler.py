@@ -82,7 +82,7 @@ def prebooked_scheduling(requests, port):
 
 	permuted_jobs = []
 	for r in requests:
-		interval = find_duration(port['power'], r['battery_capacity'])
+		interval = find_duration(port['ratedPowerKW'], r['battery_capacity'], r['soc'])
 		s = math.ceil(r['start_time']/SLOT_TIME) * SLOT_TIME
 
 		for start in range(s, r['end_time'], SLOT_TIME):

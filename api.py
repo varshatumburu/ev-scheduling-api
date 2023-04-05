@@ -7,6 +7,7 @@ import modules.matching as matching, modules.helper as helper
 import math
 from modules.scheduler import SLOT_TIME
 import config
+from queue import PriorityQueue
 
 app = Flask(__name__)
 
@@ -19,16 +20,17 @@ def schedule_request():
         end_time = request_data['end_time']
         cs_queue = request_data['cs_queue']
         soc = request_data['soc']
-        vehicle_type = request_data['vehicle_type']
         bcap = request_data['battery_capacity']
-        mileage = request_data['mileage']
+        connectorTypes = request_data['connectors']
     
     except: 
         json.dumps({"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
 
     # retrieve already scheduled info/ datasets
-    existing_requests = pd.read_json('datasets/requests.json')
-    charging_stations = pd.read_json('datasets/charging_stations.json')
+    existing_requests = json.load(open('datasets/requests.json'))
+    charging_stations = json.load(open('datasets/ev_stations.json'))
+    config.CHARGING_STATIONS = charging_stations
+    
     raw_schedule = json.load(open('datasets/slot_mapping.json'))
     raw_pslots = json.load(open('datasets/possible_slots.json'))
 
@@ -44,40 +46,56 @@ def schedule_request():
 
     # try to fit new request
     try:
-        new_idx = max(existing_requests['index'])+1
+        new_idx = max([d['index'] for d in existing_requests])+1
     except:
-        new_idx = 0
+        new_idx=0
 
-    new_request = pd.DataFrame(data={
+    new_request = {
             "index": new_idx,
 			"start_time": start_time,
 			"end_time": end_time,
             "Available from": str(datetime.time(int(start_time)//60, int(start_time)%60)),
             "Available till": str(datetime.time(int(end_time)//60, int(end_time)%60)),
-            "current_soc": soc,
+            "soc": soc,
             "battery_capacity": bcap,
-            "mileage": mileage,
-            "vehicle_type": vehicle_type
-        }, index=[0])
-    updated_requests = pd.concat([new_request, existing_requests[:]]).drop_duplicates().reset_index(drop=True)
-    config.REQUESTS = updated_requests
+            "connectors": connectorTypes
+        }
+    existing_requests.append(new_request)
+    #updated_requests = pd.concat([new_request, existing_requests[:]]).drop_duplicates().reset_index(drop=True)
+    config.REQUESTS = existing_requests
 
     config.SLOT_MAPPING = existing_schedule
     config.POSSIBLE_SLOTS = existing_pslots
     flag=0
     if len(cs_queue)==0:
         return json.dumps({"Error":"Scheduling Error", "Message":"No ports given in priority to schedule charging"})
-    while len(cs_queue)!=0:
-        port_id = cs_queue.pop(0)
-        csno, portno = int(port_id.split('p')[0]), int(port_id.split('p')[1])
+    
+    ports_priority = []
+    for cs_key in cs_queue:
+        ports = charging_stations[cs_key]['chargingPark']['connectors']
+        q = PriorityQueue()
+        for port in ports:
+            # if port and vehicle specifications match
+            if port['connectorType'] in connectorTypes:
+                duration = helper.find_duration(port['ratedPowerKW'], bcap, soc)
+                q.put((duration, port['id']))
+
+        while not q.empty():
+            (dur, portid) = q.get()
+            ports_priority.append((cs_key+'__'+str(portid), dur))
+
+
+    while len(ports_priority)!=0:
+        (port_id, duration) = ports_priority.pop(0)
+        cs_key, portno = port_id.split('__')[0], int(port_id.split('__')[1])
         
-        try:
-            charging_port = charging_stations.to_dict("records")[csno]["ports"][portno]
-        except:
-            return json.dumps({"Error":"Index Error", "Message":"Charging station/ports out of index range"})
+        # try:
+        #     charging_port = [x for x in charging_stations[cs_key]['chargingPark']['connectors'] if x['id']==portno][0]
+        # except:
+        #     return json.dumps({"Error":"Index Error", "Message":"Charging station/ports out of index range"})
 
         stime = helper.roundup(start_time)
-        duration = helper.find_duration(charging_port['power'], bcap)
+        # duration = helper.find_duration(charging_port['ratedPowerKW'], bcap, soc)
         nslots = int(math.ceil(duration/SLOT_TIME))
         config.REQUIRED_SLOTS[new_idx] = nslots
         matched_slots = []
@@ -100,13 +118,14 @@ def schedule_request():
             config.SLOT_MAPPING[port_id]={}
 
         if(matching.kuhn(new_idx, config.VISITED, 0, config.SLOT_MAPPING, port_id)):
-            print(f"\n>>> REQUEST ACCEPTED! Accommodated in Port {port_id}")
+            print(f"\n>>> REQUEST ACCEPTED! Can be accommodated in Port {port_id}")
             flag=1
             json_object = json.dumps(config.SLOT_MAPPING, indent=4)
             with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
 
-            updated_requests.to_json('datasets/requests.json', orient="records", indent=4)
-            return json.dumps({"id": new_idx, "success":flag, "port": port_id, "message":"request accepted"})
+            updated_requests = json.dumps(config.REQUESTS, indent=4)
+            with open("datasets/requests.json","w") as f: f.write(updated_requests)
+            return json.dumps({"id": new_idx, "success":flag, "port": port_id, "chargingTime": duration, "message":"request accepted"})
         else:
             config.REQUEST_MAPPING[port_id].remove(new_idx)
             # delete slots that aren't possible anymore
@@ -115,7 +134,9 @@ def schedule_request():
     if(flag==0): 
         print("\n>>> REQUEST DENIED.")
 
-        updated_requests.to_json('datasets/requests.json', orient="records", indent=4)
+        updated_requests = json.dumps(config.REQUESTS, indent=4)
+        with open("datasets/requests.json","w") as f: f.write(updated_requests)
+
         return json.dumps({"id": new_idx,"success":flag, "message":"request denied"})
 
 if __name__ == '__main__':

@@ -2,16 +2,31 @@ import requests
 import json
 
 url = 'http://127.0.0.1:5000'
-cs_indices = ['3p0','1p0','1p3','1p2','0p0','3p0','4p1','4p0','5p0','7p1','6p0']
+
+cs_keys = ['v4BtSzW6bd1j7YfRrWPLyQ',
+              'qPjF-ulpKFB5u7Tr3EIwCg',
+              'PcXxHxidfrpSUePHXNYb_A',
+              '7J3EWh4WAPS0X8QtcpovMQ']
+
+connectors = [
+    "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"]
 
 data = {
     'start_time': 600, 
-	'end_time': 610, 
-	'cs_queue': cs_indices, 
+	'end_time': 650, 
+	'cs_queue': cs_keys, 
     'soc':10, 
-    'vehicle_type':'4w',
 	'battery_capacity':60,
-    'mileage':300
+    'connectors':connectors
 }
 headers =  {"Content-Type":"application/json"}
 x = requests.post(url, data = json.dumps(data), headers=headers)

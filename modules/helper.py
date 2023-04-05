@@ -7,8 +7,8 @@ from scheduler import SLOT_TIME
 def roundup(x):
     return int(math.ceil(x / SLOT_TIME)) * int(SLOT_TIME)
 
-def find_duration(port_power, battery_capacity, power_factor=0.8):
-    return math.ceil(battery_capacity/(port_power*power_factor))
+def find_duration(port_power, battery_capacity, soc, power_factor=0.8):
+    return math.ceil((battery_capacity/(port_power*power_factor))*(1-soc/100))
 
 def mapRequests2Ports(nreq, nearest_ports):
     reqMapping = dict()

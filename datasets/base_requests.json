@@ -1,1102 +1,1708 @@
 [
     {
         "index": 0,
-        "start_time": 824,
-        "end_time": 879,
-        "Available from": "13:44:00",
-        "Available till": "14:39:00",
-        "current_soc": 9,
-        "battery_capacity": 44,
-        "mileage": 91,
-        "vehicle_type": "3w"
+        "start_time": 1145,
+        "end_time": 1174,
+        "Available from": "19:05:00",
+        "Available till": "19:34:00",
+        "current_soc": 19,
+        "battery_capacity": 71,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 1,
-        "start_time": 1371,
-        "end_time": 1393,
-        "Available from": "22:51:00",
-        "Available till": "23:13:00",
-        "current_soc": 16,
-        "battery_capacity": 78,
-        "mileage": 121,
-        "vehicle_type": "3w"
+        "start_time": 1224,
+        "end_time": 1284,
+        "Available from": "20:24:00",
+        "Available till": "21:24:00",
+        "current_soc": 3,
+        "battery_capacity": 69,
+        "connectors": [
+            "Chademo",
+            "GBT20234Part2",
+            "IEC62196Type1CCS",
+            "IEC62196Type1",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CCS",
+            "GBT20234Part3",
+            "IEC62196Type3",
+            "IEC60309DCWhite",
+            "IEC62196Type2Outlet"
+        ]
     },
     {
         "index": 2,
-        "start_time": 1269,
-        "end_time": 1295,
-        "Available from": "21:09:00",
-        "Available till": "21:35:00",
-        "current_soc": 14,
+        "start_time": 338,
+        "end_time": 356,
+        "Available from": "05:38:00",
+        "Available till": "05:56:00",
+        "current_soc": 18,
         "battery_capacity": 82,
-        "mileage": 149,
-        "vehicle_type": "2w"
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3",
+            "IEC60309DCWhite",
+            "IEC62196Type2Outlet",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 3,
-        "start_time": 1245,
-        "end_time": 1267,
-        "Available from": "20:45:00",
-        "Available till": "21:07:00",
-        "current_soc": 11,
-        "battery_capacity": 62,
-        "mileage": 114,
-        "vehicle_type": "3w"
+        "start_time": 535,
+        "end_time": 562,
+        "Available from": "08:55:00",
+        "Available till": "09:22:00",
+        "current_soc": 7,
+        "battery_capacity": 43,
+        "connectors": [
+            "IEC60309DCWhite",
+            "IEC62196Type1",
+            "IEC62196Type2CCS",
+            "StandardHouseholdCountrySpecific",
+            "Chademo",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2Outlet",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 4,
-        "start_time": 757,
-        "end_time": 813,
-        "Available from": "12:37:00",
-        "Available till": "13:33:00",
-        "current_soc": 14,
-        "battery_capacity": 79,
-        "mileage": 103,
-        "vehicle_type": "4w"
+        "start_time": 303,
+        "end_time": 359,
+        "Available from": "05:03:00",
+        "Available till": "05:59:00",
+        "current_soc": 10,
+        "battery_capacity": 40,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "IEC62196Type1CCS",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 5,
-        "start_time": 1296,
-        "end_time": 1340,
-        "Available from": "21:36:00",
-        "Available till": "22:20:00",
-        "current_soc": 4,
-        "battery_capacity": 72,
-        "mileage": 331,
-        "vehicle_type": "4w"
+        "start_time": 408,
+        "end_time": 423,
+        "Available from": "06:48:00",
+        "Available till": "07:03:00",
+        "current_soc": 13,
+        "battery_capacity": 53,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "GBT20234Part2",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 6,
-        "start_time": 394,
-        "end_time": 415,
-        "Available from": "06:34:00",
-        "Available till": "06:55:00",
-        "current_soc": 17,
-        "battery_capacity": 51,
-        "mileage": 273,
-        "vehicle_type": "4w"
+        "start_time": 412,
+        "end_time": 440,
+        "Available from": "06:52:00",
+        "Available till": "07:20:00",
+        "current_soc": 5,
+        "battery_capacity": 87,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type1CCS",
+            "GBT20234Part3"
+        ]
     },
     {
         "index": 7,
-        "start_time": 1071,
-        "end_time": 1126,
-        "Available from": "17:51:00",
-        "Available till": "18:46:00",
-        "current_soc": 2,
-        "battery_capacity": 71,
-        "mileage": 318,
-        "vehicle_type": "4w"
+        "start_time": 396,
+        "end_time": 425,
+        "Available from": "06:36:00",
+        "Available till": "07:05:00",
+        "current_soc": 20,
+        "battery_capacity": 69,
+        "connectors": [
+            "IEC62196Type3",
+            "IEC62196Type2Outlet",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 8,
-        "start_time": 943,
-        "end_time": 970,
-        "Available from": "15:43:00",
-        "Available till": "16:10:00",
-        "current_soc": 6,
-        "battery_capacity": 76,
-        "mileage": 350,
-        "vehicle_type": "3w"
+        "start_time": 566,
+        "end_time": 619,
+        "Available from": "09:26:00",
+        "Available till": "10:19:00",
+        "current_soc": 9,
+        "battery_capacity": 70,
+        "connectors": [
+            "Chademo",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "IEC62196Type1CCS",
+            "GBT20234Part3",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 9,
-        "start_time": 486,
-        "end_time": 504,
-        "Available from": "08:06:00",
-        "Available till": "08:24:00",
-        "current_soc": 2,
-        "battery_capacity": 42,
-        "mileage": 52,
-        "vehicle_type": "3w"
+        "start_time": 1233,
+        "end_time": 1272,
+        "Available from": "20:33:00",
+        "Available till": "21:12:00",
+        "current_soc": 3,
+        "battery_capacity": 82,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 10,
-        "start_time": 436,
-        "end_time": 464,
-        "Available from": "07:16:00",
-        "Available till": "07:44:00",
-        "current_soc": 20,
-        "battery_capacity": 56,
-        "mileage": 223,
-        "vehicle_type": "3w"
+        "start_time": 230,
+        "end_time": 285,
+        "Available from": "03:50:00",
+        "Available till": "04:45:00",
+        "current_soc": 5,
+        "battery_capacity": 64,
+        "connectors": [
+            "IEC62196Type3",
+            "IEC62196Type2CableAttached",
+            "GBT20234Part3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "Chademo",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 11,
-        "start_time": 1375,
-        "end_time": 1402,
-        "Available from": "22:55:00",
-        "Available till": "23:22:00",
-        "current_soc": 10,
-        "battery_capacity": 44,
-        "mileage": 76,
-        "vehicle_type": "4w"
+        "start_time": 99,
+        "end_time": 127,
+        "Available from": "01:39:00",
+        "Available till": "02:07:00",
+        "current_soc": 2,
+        "battery_capacity": 97,
+        "connectors": [
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 12,
-        "start_time": 394,
-        "end_time": 425,
-        "Available from": "06:34:00",
-        "Available till": "07:05:00",
+        "start_time": 138,
+        "end_time": 189,
+        "Available from": "02:18:00",
+        "Available till": "03:09:00",
         "current_soc": 14,
-        "battery_capacity": 51,
-        "mileage": 335,
-        "vehicle_type": "4w"
+        "battery_capacity": 50,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 13,
-        "start_time": 374,
-        "end_time": 394,
-        "Available from": "06:14:00",
-        "Available till": "06:34:00",
-        "current_soc": 13,
-        "battery_capacity": 46,
-        "mileage": 79,
-        "vehicle_type": "2w"
+        "start_time": 332,
+        "end_time": 362,
+        "Available from": "05:32:00",
+        "Available till": "06:02:00",
+        "current_soc": 3,
+        "battery_capacity": 41,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type1",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CCS",
+            "IEC62196Type2CableAttached",
+            "GBT20234Part3"
+        ]
     },
     {
         "index": 14,
-        "start_time": 1072,
-        "end_time": 1119,
-        "Available from": "17:52:00",
-        "Available till": "18:39:00",
-        "current_soc": 16,
-        "battery_capacity": 66,
-        "mileage": 164,
-        "vehicle_type": "3w"
+        "start_time": 1009,
+        "end_time": 1040,
+        "Available from": "16:49:00",
+        "Available till": "17:20:00",
+        "current_soc": 14,
+        "battery_capacity": 54,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part3",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 15,
-        "start_time": 1216,
-        "end_time": 1240,
-        "Available from": "20:16:00",
-        "Available till": "20:40:00",
-        "current_soc": 11,
-        "battery_capacity": 94,
-        "mileage": 271,
-        "vehicle_type": "3w"
+        "start_time": 648,
+        "end_time": 681,
+        "Available from": "10:48:00",
+        "Available till": "11:21:00",
+        "current_soc": 4,
+        "battery_capacity": 51,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 16,
-        "start_time": 590,
-        "end_time": 618,
-        "Available from": "09:50:00",
-        "Available till": "10:18:00",
-        "current_soc": 3,
-        "battery_capacity": 57,
-        "mileage": 286,
-        "vehicle_type": "3w"
+        "start_time": 38,
+        "end_time": 73,
+        "Available from": "00:38:00",
+        "Available till": "01:13:00",
+        "current_soc": 2,
+        "battery_capacity": 72,
+        "connectors": [
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309DCWhite",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 17,
-        "start_time": 1185,
-        "end_time": 1214,
-        "Available from": "19:45:00",
-        "Available till": "20:14:00",
-        "current_soc": 15,
-        "battery_capacity": 52,
-        "mileage": 179,
-        "vehicle_type": "2w"
+        "start_time": 680,
+        "end_time": 702,
+        "Available from": "11:20:00",
+        "Available till": "11:42:00",
+        "current_soc": 17,
+        "battery_capacity": 98,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type2Outlet",
+            "GBT20234Part3",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 18,
-        "start_time": 252,
-        "end_time": 287,
-        "Available from": "04:12:00",
-        "Available till": "04:47:00",
-        "current_soc": 9,
-        "battery_capacity": 68,
-        "mileage": 135,
-        "vehicle_type": "3w"
+        "start_time": 487,
+        "end_time": 528,
+        "Available from": "08:07:00",
+        "Available till": "08:48:00",
+        "current_soc": 14,
+        "battery_capacity": 96,
+        "connectors": [
+            "IEC62196Type3",
+            "IEC62196Type1CCS",
+            "IEC60309DCWhite",
+            "GBT20234Part3",
+            "IEC62196Type2Outlet",
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 19,
-        "start_time": 805,
-        "end_time": 826,
-        "Available from": "13:25:00",
-        "Available till": "13:46:00",
-        "current_soc": 9,
-        "battery_capacity": 67,
-        "mileage": 212,
-        "vehicle_type": "3w"
+        "start_time": 854,
+        "end_time": 910,
+        "Available from": "14:14:00",
+        "Available till": "15:10:00",
+        "current_soc": 20,
+        "battery_capacity": 54,
+        "connectors": [
+            "IEC62196Type1CCS",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 20,
-        "start_time": 1340,
-        "end_time": 1355,
-        "Available from": "22:20:00",
-        "Available till": "22:35:00",
-        "current_soc": 11,
-        "battery_capacity": 97,
-        "mileage": 214,
-        "vehicle_type": "4w"
+        "start_time": 265,
+        "end_time": 284,
+        "Available from": "04:25:00",
+        "Available till": "04:44:00",
+        "current_soc": 10,
+        "battery_capacity": 55,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type2CableAttached",
+            "GBT20234Part3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type1",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part2",
+            "IEC62196Type3",
+            "IEC62196Type2Outlet",
+            "IEC62196Type1CCS",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 21,
-        "start_time": 1020,
-        "end_time": 1072,
-        "Available from": "17:00:00",
-        "Available till": "17:52:00",
-        "current_soc": 13,
-        "battery_capacity": 51,
-        "mileage": 228,
-        "vehicle_type": "4w"
+        "start_time": 269,
+        "end_time": 294,
+        "Available from": "04:29:00",
+        "Available till": "04:54:00",
+        "current_soc": 11,
+        "battery_capacity": 68,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "IEC60309DCWhite",
+            "IEC60309AC1PhaseBlue",
+            "Chademo"
+        ]
     },
     {
         "index": 22,
-        "start_time": 834,
-        "end_time": 866,
-        "Available from": "13:54:00",
-        "Available till": "14:26:00",
-        "current_soc": 20,
-        "battery_capacity": 77,
-        "mileage": 63,
-        "vehicle_type": "2w"
+        "start_time": 545,
+        "end_time": 581,
+        "Available from": "09:05:00",
+        "Available till": "09:41:00",
+        "current_soc": 11,
+        "battery_capacity": 73,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "IEC62196Type1CCS",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2Outlet",
+            "GBT20234Part2",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 23,
-        "start_time": 594,
-        "end_time": 612,
-        "Available from": "09:54:00",
-        "Available till": "10:12:00",
-        "current_soc": 20,
-        "battery_capacity": 62,
-        "mileage": 323,
-        "vehicle_type": "4w"
+        "start_time": 907,
+        "end_time": 953,
+        "Available from": "15:07:00",
+        "Available till": "15:53:00",
+        "current_soc": 15,
+        "battery_capacity": 56,
+        "connectors": [
+            "IEC60309DCWhite",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part3",
+            "IEC62196Type2Outlet",
+            "IEC62196Type3",
+            "IEC62196Type1CCS",
+            "GBT20234Part2",
+            "IEC62196Type2CCS",
+            "IEC62196Type2CableAttached",
+            "Chademo",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 24,
-        "start_time": 405,
-        "end_time": 462,
-        "Available from": "06:45:00",
-        "Available till": "07:42:00",
-        "current_soc": 11,
-        "battery_capacity": 41,
-        "mileage": 112,
-        "vehicle_type": "2w"
+        "start_time": 386,
+        "end_time": 444,
+        "Available from": "06:26:00",
+        "Available till": "07:24:00",
+        "current_soc": 4,
+        "battery_capacity": 89,
+        "connectors": [
+            "IEC60309DCWhite",
+            "IEC62196Type1",
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 25,
-        "start_time": 1267,
-        "end_time": 1303,
-        "Available from": "21:07:00",
-        "Available till": "21:43:00",
-        "current_soc": 4,
-        "battery_capacity": 69,
-        "mileage": 366,
-        "vehicle_type": "2w"
+        "start_time": 1109,
+        "end_time": 1153,
+        "Available from": "18:29:00",
+        "Available till": "19:13:00",
+        "current_soc": 8,
+        "battery_capacity": 96,
+        "connectors": [
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 26,
-        "start_time": 186,
-        "end_time": 219,
-        "Available from": "03:06:00",
-        "Available till": "03:39:00",
-        "current_soc": 8,
-        "battery_capacity": 80,
-        "mileage": 231,
-        "vehicle_type": "4w"
+        "start_time": 583,
+        "end_time": 635,
+        "Available from": "09:43:00",
+        "Available till": "10:35:00",
+        "current_soc": 16,
+        "battery_capacity": 90,
+        "connectors": [
+            "IEC62196Type1",
+            "GBT20234Part2",
+            "IEC62196Type2Outlet",
+            "IEC62196Type2CCS",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 27,
-        "start_time": 863,
-        "end_time": 886,
-        "Available from": "14:23:00",
-        "Available till": "14:46:00",
-        "current_soc": 3,
-        "battery_capacity": 68,
-        "mileage": 96,
-        "vehicle_type": "2w"
+        "start_time": 63,
+        "end_time": 79,
+        "Available from": "01:03:00",
+        "Available till": "01:19:00",
+        "current_soc": 7,
+        "battery_capacity": 90,
+        "connectors": [
+            "IEC62196Type1CCS",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 28,
-        "start_time": 164,
-        "end_time": 214,
-        "Available from": "02:44:00",
-        "Available till": "03:34:00",
-        "current_soc": 13,
-        "battery_capacity": 59,
-        "mileage": 219,
-        "vehicle_type": "2w"
+        "start_time": 1354,
+        "end_time": 1414,
+        "Available from": "22:34:00",
+        "Available till": "23:34:00",
+        "current_soc": 9,
+        "battery_capacity": 42,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC62196Type2CCS",
+            "IEC62196Type2Outlet",
+            "Chademo",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 29,
-        "start_time": 652,
-        "end_time": 695,
-        "Available from": "10:52:00",
-        "Available till": "11:35:00",
-        "current_soc": 2,
-        "battery_capacity": 46,
-        "mileage": 396,
-        "vehicle_type": "4w"
+        "start_time": 913,
+        "end_time": 930,
+        "Available from": "15:13:00",
+        "Available till": "15:30:00",
+        "current_soc": 4,
+        "battery_capacity": 71,
+        "connectors": [
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 30,
-        "start_time": 117,
-        "end_time": 151,
-        "Available from": "01:57:00",
-        "Available till": "02:31:00",
-        "current_soc": 2,
-        "battery_capacity": 95,
-        "mileage": 381,
-        "vehicle_type": "2w"
+        "start_time": 181,
+        "end_time": 217,
+        "Available from": "03:01:00",
+        "Available till": "03:37:00",
+        "current_soc": 10,
+        "battery_capacity": 84,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2Outlet",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 31,
-        "start_time": 1201,
-        "end_time": 1260,
-        "Available from": "20:01:00",
-        "Available till": "21:00:00",
-        "current_soc": 12,
-        "battery_capacity": 76,
-        "mileage": 236,
-        "vehicle_type": "4w"
+        "start_time": 1005,
+        "end_time": 1060,
+        "Available from": "16:45:00",
+        "Available till": "17:40:00",
+        "current_soc": 9,
+        "battery_capacity": 43,
+        "connectors": [
+            "IEC60309DCWhite",
+            "GBT20234Part3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type1CCS",
+            "IEC62196Type2Outlet",
+            "IEC62196Type1",
+            "IEC62196Type2CableAttached",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 32,
-        "start_time": 953,
-        "end_time": 1006,
-        "Available from": "15:53:00",
-        "Available till": "16:46:00",
-        "current_soc": 2,
-        "battery_capacity": 68,
-        "mileage": 240,
-        "vehicle_type": "4w"
+        "start_time": 255,
+        "end_time": 277,
+        "Available from": "04:15:00",
+        "Available till": "04:37:00",
+        "current_soc": 18,
+        "battery_capacity": 97,
+        "connectors": [
+            "IEC60309DCWhite",
+            "GBT20234Part2",
+            "IEC62196Type2CCS",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 33,
-        "start_time": 402,
-        "end_time": 438,
-        "Available from": "06:42:00",
-        "Available till": "07:18:00",
-        "current_soc": 3,
-        "battery_capacity": 77,
-        "mileage": 235,
-        "vehicle_type": "3w"
+        "start_time": 439,
+        "end_time": 486,
+        "Available from": "07:19:00",
+        "Available till": "08:06:00",
+        "current_soc": 13,
+        "battery_capacity": 41,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 34,
-        "start_time": 67,
-        "end_time": 126,
-        "Available from": "01:07:00",
-        "Available till": "02:06:00",
-        "current_soc": 13,
-        "battery_capacity": 78,
-        "mileage": 155,
-        "vehicle_type": "2w"
+        "start_time": 1290,
+        "end_time": 1311,
+        "Available from": "21:30:00",
+        "Available till": "21:51:00",
+        "current_soc": 9,
+        "battery_capacity": 48,
+        "connectors": [
+            "IEC60309AC1PhaseBlue",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 35,
-        "start_time": 340,
-        "end_time": 380,
-        "Available from": "05:40:00",
-        "Available till": "06:20:00",
-        "current_soc": 13,
-        "battery_capacity": 90,
-        "mileage": 227,
-        "vehicle_type": "2w"
+        "start_time": 723,
+        "end_time": 777,
+        "Available from": "12:03:00",
+        "Available till": "12:57:00",
+        "current_soc": 10,
+        "battery_capacity": 45,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC62196Type3",
+            "Chademo"
+        ]
     },
     {
         "index": 36,
-        "start_time": 904,
-        "end_time": 958,
-        "Available from": "15:04:00",
-        "Available till": "15:58:00",
-        "current_soc": 15,
-        "battery_capacity": 90,
-        "mileage": 387,
-        "vehicle_type": "4w"
+        "start_time": 805,
+        "end_time": 860,
+        "Available from": "13:25:00",
+        "Available till": "14:20:00",
+        "current_soc": 12,
+        "battery_capacity": 50,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC62196Type1CCS",
+            "IEC62196Type1",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2CCS",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309DCWhite",
+            "Chademo"
+        ]
     },
     {
         "index": 37,
-        "start_time": 15,
-        "end_time": 34,
-        "Available from": "00:15:00",
-        "Available till": "00:34:00",
-        "current_soc": 5,
-        "battery_capacity": 68,
-        "mileage": 123,
-        "vehicle_type": "3w"
+        "start_time": 998,
+        "end_time": 1030,
+        "Available from": "16:38:00",
+        "Available till": "17:10:00",
+        "current_soc": 14,
+        "battery_capacity": 63,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "GBT20234Part2",
+            "IEC62196Type2Outlet"
+        ]
     },
     {
         "index": 38,
-        "start_time": 1192,
-        "end_time": 1221,
-        "Available from": "19:52:00",
-        "Available till": "20:21:00",
-        "current_soc": 7,
-        "battery_capacity": 90,
-        "mileage": 391,
-        "vehicle_type": "4w"
+        "start_time": 195,
+        "end_time": 221,
+        "Available from": "03:15:00",
+        "Available till": "03:41:00",
+        "current_soc": 12,
+        "battery_capacity": 67,
+        "connectors": [
+            "IEC62196Type1",
+            "Chademo",
+            "IEC60309DCWhite",
+            "IEC62196Type2Outlet",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 39,
-        "start_time": 56,
-        "end_time": 73,
-        "Available from": "00:56:00",
-        "Available till": "01:13:00",
-        "current_soc": 10,
-        "battery_capacity": 58,
-        "mileage": 139,
-        "vehicle_type": "3w"
+        "start_time": 639,
+        "end_time": 664,
+        "Available from": "10:39:00",
+        "Available till": "11:04:00",
+        "current_soc": 5,
+        "battery_capacity": 46,
+        "connectors": [
+            "IEC62196Type1",
+            "IEC60309DCWhite",
+            "GBT20234Part3"
+        ]
     },
     {
         "index": 40,
-        "start_time": 940,
-        "end_time": 1000,
-        "Available from": "15:40:00",
-        "Available till": "16:40:00",
-        "current_soc": 12,
-        "battery_capacity": 58,
-        "mileage": 162,
-        "vehicle_type": "2w"
+        "start_time": 782,
+        "end_time": 827,
+        "Available from": "13:02:00",
+        "Available till": "13:47:00",
+        "current_soc": 9,
+        "battery_capacity": 55,
+        "connectors": [
+            "IEC62196Type3",
+            "Chademo",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1",
+            "IEC60309DCWhite",
+            "IEC62196Type1CCS",
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 41,
-        "start_time": 1196,
-        "end_time": 1213,
-        "Available from": "19:56:00",
-        "Available till": "20:13:00",
-        "current_soc": 10,
-        "battery_capacity": 100,
-        "mileage": 156,
-        "vehicle_type": "3w"
+        "start_time": 125,
+        "end_time": 157,
+        "Available from": "02:05:00",
+        "Available till": "02:37:00",
+        "current_soc": 8,
+        "battery_capacity": 62,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CableAttached",
+            "IEC60309AC1PhaseBlue",
+            "Chademo",
+            "IEC62196Type2Outlet",
+            "IEC62196Type1",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC62196Type3",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 42,
-        "start_time": 485,
-        "end_time": 512,
-        "Available from": "08:05:00",
-        "Available till": "08:32:00",
-        "current_soc": 18,
-        "battery_capacity": 78,
-        "mileage": 161,
-        "vehicle_type": "2w"
+        "start_time": 399,
+        "end_time": 429,
+        "Available from": "06:39:00",
+        "Available till": "07:09:00",
+        "current_soc": 6,
+        "battery_capacity": 61,
+        "connectors": [
+            "IEC62196Type1CCS",
+            "Chademo",
+            "GBT20234Part3",
+            "GBT20234Part2",
+            "IEC62196Type3",
+            "IEC62196Type2Outlet",
+            "IEC60309DCWhite",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 43,
-        "start_time": 515,
-        "end_time": 532,
-        "Available from": "08:35:00",
-        "Available till": "08:52:00",
-        "current_soc": 3,
-        "battery_capacity": 40,
-        "mileage": 251,
-        "vehicle_type": "2w"
+        "start_time": 18,
+        "end_time": 63,
+        "Available from": "00:18:00",
+        "Available till": "01:03:00",
+        "current_soc": 5,
+        "battery_capacity": 82,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "IEC62196Type1CCS",
+            "GBT20234Part2",
+            "GBT20234Part3",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 44,
-        "start_time": 1339,
-        "end_time": 1369,
-        "Available from": "22:19:00",
-        "Available till": "22:49:00",
-        "current_soc": 10,
-        "battery_capacity": 73,
-        "mileage": 156,
-        "vehicle_type": "4w"
+        "start_time": 665,
+        "end_time": 690,
+        "Available from": "11:05:00",
+        "Available till": "11:30:00",
+        "current_soc": 2,
+        "battery_capacity": 99,
+        "connectors": [
+            "Chademo"
+        ]
     },
     {
         "index": 45,
-        "start_time": 819,
-        "end_time": 868,
-        "Available from": "13:39:00",
-        "Available till": "14:28:00",
-        "current_soc": 9,
-        "battery_capacity": 41,
-        "mileage": 83,
-        "vehicle_type": "3w"
+        "start_time": 491,
+        "end_time": 532,
+        "Available from": "08:11:00",
+        "Available till": "08:52:00",
+        "current_soc": 10,
+        "battery_capacity": 56,
+        "connectors": [
+            "Chademo",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2CCS",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type1CCS",
+            "GBT20234Part3",
+            "GBT20234Part2",
+            "IEC60309DCWhite",
+            "IEC62196Type1",
+            "IEC62196Type2Outlet"
+        ]
     },
     {
         "index": 46,
-        "start_time": 976,
-        "end_time": 1012,
-        "Available from": "16:16:00",
-        "Available till": "16:52:00",
-        "current_soc": 4,
-        "battery_capacity": 77,
-        "mileage": 313,
-        "vehicle_type": "2w"
+        "start_time": 104,
+        "end_time": 154,
+        "Available from": "01:44:00",
+        "Available till": "02:34:00",
+        "current_soc": 18,
+        "battery_capacity": 55,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CCS",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type1CCS",
+            "IEC62196Type1",
+            "GBT20234Part2",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 47,
-        "start_time": 400,
-        "end_time": 451,
-        "Available from": "06:40:00",
-        "Available till": "07:31:00",
-        "current_soc": 10,
-        "battery_capacity": 64,
-        "mileage": 329,
-        "vehicle_type": "3w"
+        "start_time": 1161,
+        "end_time": 1197,
+        "Available from": "19:21:00",
+        "Available till": "19:57:00",
+        "current_soc": 18,
+        "battery_capacity": 41,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type1",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CCS",
+            "IEC60309DCWhite",
+            "GBT20234Part3",
+            "IEC62196Type2Outlet"
+        ]
     },
     {
         "index": 48,
-        "start_time": 1069,
-        "end_time": 1128,
-        "Available from": "17:49:00",
-        "Available till": "18:48:00",
-        "current_soc": 4,
-        "battery_capacity": 54,
-        "mileage": 147,
-        "vehicle_type": "3w"
+        "start_time": 1136,
+        "end_time": 1161,
+        "Available from": "18:56:00",
+        "Available till": "19:21:00",
+        "current_soc": 3,
+        "battery_capacity": 63,
+        "connectors": [
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 49,
-        "start_time": 1374,
-        "end_time": 1392,
-        "Available from": "22:54:00",
-        "Available till": "23:12:00",
-        "current_soc": 17,
-        "battery_capacity": 43,
-        "mileage": 174,
-        "vehicle_type": "3w"
+        "start_time": 1220,
+        "end_time": 1260,
+        "Available from": "20:20:00",
+        "Available till": "21:00:00",
+        "current_soc": 13,
+        "battery_capacity": 53,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type1",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part3"
+        ]
     },
     {
         "index": 50,
-        "start_time": 816,
-        "end_time": 844,
-        "Available from": "13:36:00",
-        "Available till": "14:04:00",
-        "current_soc": 13,
-        "battery_capacity": 48,
-        "mileage": 70,
-        "vehicle_type": "4w"
+        "start_time": 189,
+        "end_time": 217,
+        "Available from": "03:09:00",
+        "Available till": "03:37:00",
+        "current_soc": 11,
+        "battery_capacity": 44,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "GBT20234Part3",
+            "IEC62196Type1",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part2",
+            "IEC62196Type2CableAttached",
+            "IEC60309DCWhite",
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 51,
-        "start_time": 200,
-        "end_time": 219,
-        "Available from": "03:20:00",
-        "Available till": "03:39:00",
-        "current_soc": 13,
-        "battery_capacity": 64,
-        "mileage": 271,
-        "vehicle_type": "2w"
+        "start_time": 166,
+        "end_time": 181,
+        "Available from": "02:46:00",
+        "Available till": "03:01:00",
+        "current_soc": 15,
+        "battery_capacity": 41,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC62196Type2Outlet",
+            "IEC62196Type1CCS",
+            "IEC60309AC1PhaseBlue",
+            "Chademo",
+            "IEC60309DCWhite",
+            "IEC62196Type2CCS",
+            "IEC62196Type3"
+        ]
     },
     {
         "index": 52,
-        "start_time": 1376,
-        "end_time": 1433,
-        "Available from": "22:56:00",
-        "Available till": "23:53:00",
-        "current_soc": 3,
-        "battery_capacity": 84,
-        "mileage": 270,
-        "vehicle_type": "2w"
+        "start_time": 1028,
+        "end_time": 1066,
+        "Available from": "17:08:00",
+        "Available till": "17:46:00",
+        "current_soc": 19,
+        "battery_capacity": 55,
+        "connectors": [
+            "Chademo",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type1",
+            "IEC62196Type2Outlet",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 53,
-        "start_time": 608,
-        "end_time": 644,
-        "Available from": "10:08:00",
-        "Available till": "10:44:00",
-        "current_soc": 3,
-        "battery_capacity": 44,
-        "mileage": 249,
-        "vehicle_type": "2w"
+        "start_time": 176,
+        "end_time": 230,
+        "Available from": "02:56:00",
+        "Available till": "03:50:00",
+        "current_soc": 6,
+        "battery_capacity": 57,
+        "connectors": [
+            "GBT20234Part3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CableAttached",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part2",
+            "Chademo",
+            "IEC62196Type3",
+            "IEC62196Type2Outlet",
+            "IEC62196Type2CCS",
+            "IEC60309DCWhite",
+            "IEC62196Type1CCS",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 54,
-        "start_time": 1242,
-        "end_time": 1278,
-        "Available from": "20:42:00",
-        "Available till": "21:18:00",
-        "current_soc": 6,
-        "battery_capacity": 46,
-        "mileage": 339,
-        "vehicle_type": "2w"
+        "start_time": 184,
+        "end_time": 203,
+        "Available from": "03:04:00",
+        "Available till": "03:23:00",
+        "current_soc": 13,
+        "battery_capacity": 47,
+        "connectors": [
+            "GBT20234Part2",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 55,
-        "start_time": 743,
-        "end_time": 764,
-        "Available from": "12:23:00",
-        "Available till": "12:44:00",
-        "current_soc": 11,
-        "battery_capacity": 58,
-        "mileage": 293,
-        "vehicle_type": "2w"
+        "start_time": 178,
+        "end_time": 230,
+        "Available from": "02:58:00",
+        "Available till": "03:50:00",
+        "current_soc": 5,
+        "battery_capacity": 67,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 56,
-        "start_time": 309,
-        "end_time": 348,
-        "Available from": "05:09:00",
-        "Available till": "05:48:00",
-        "current_soc": 2,
-        "battery_capacity": 91,
-        "mileage": 335,
-        "vehicle_type": "3w"
+        "start_time": 186,
+        "end_time": 207,
+        "Available from": "03:06:00",
+        "Available till": "03:27:00",
+        "current_soc": 10,
+        "battery_capacity": 59,
+        "connectors": [
+            "IEC60309AC1PhaseBlue",
+            "StandardHouseholdCountrySpecific",
+            "Chademo",
+            "GBT20234Part3"
+        ]
     },
     {
         "index": 57,
-        "start_time": 171,
-        "end_time": 210,
-        "Available from": "02:51:00",
-        "Available till": "03:30:00",
-        "current_soc": 7,
-        "battery_capacity": 79,
-        "mileage": 222,
-        "vehicle_type": "2w"
+        "start_time": 1398,
+        "end_time": 1424,
+        "Available from": "23:18:00",
+        "Available till": "23:44:00",
+        "current_soc": 15,
+        "battery_capacity": 73,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "IEC60309DCWhite",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 58,
-        "start_time": 228,
-        "end_time": 258,
-        "Available from": "03:48:00",
-        "Available till": "04:18:00",
-        "current_soc": 18,
-        "battery_capacity": 100,
-        "mileage": 296,
-        "vehicle_type": "4w"
+        "start_time": 465,
+        "end_time": 520,
+        "Available from": "07:45:00",
+        "Available till": "08:40:00",
+        "current_soc": 13,
+        "battery_capacity": 85,
+        "connectors": [
+            "IEC60309AC1PhaseBlue",
+            "Chademo",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 59,
-        "start_time": 435,
-        "end_time": 458,
-        "Available from": "07:15:00",
-        "Available till": "07:38:00",
-        "current_soc": 12,
-        "battery_capacity": 61,
-        "mileage": 217,
-        "vehicle_type": "2w"
+        "start_time": 740,
+        "end_time": 756,
+        "Available from": "12:20:00",
+        "Available till": "12:36:00",
+        "current_soc": 5,
+        "battery_capacity": 93,
+        "connectors": [
+            "GBT20234Part3",
+            "GBT20234Part2",
+            "IEC60309DCWhite",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CCS",
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1",
+            "IEC62196Type1CCS",
+            "Chademo"
+        ]
     },
     {
         "index": 60,
-        "start_time": 618,
-        "end_time": 672,
-        "Available from": "10:18:00",
-        "Available till": "11:12:00",
-        "current_soc": 4,
-        "battery_capacity": 97,
-        "mileage": 368,
-        "vehicle_type": "4w"
+        "start_time": 255,
+        "end_time": 315,
+        "Available from": "04:15:00",
+        "Available till": "05:15:00",
+        "current_soc": 14,
+        "battery_capacity": 75,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3",
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 61,
-        "start_time": 941,
-        "end_time": 967,
-        "Available from": "15:41:00",
-        "Available till": "16:07:00",
-        "current_soc": 11,
-        "battery_capacity": 86,
-        "mileage": 67,
-        "vehicle_type": "3w"
+        "start_time": 208,
+        "end_time": 256,
+        "Available from": "03:28:00",
+        "Available till": "04:16:00",
+        "current_soc": 7,
+        "battery_capacity": 82,
+        "connectors": [
+            "IEC62196Type1",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "IEC60309DCWhite",
+            "IEC62196Type3",
+            "GBT20234Part3",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 62,
-        "start_time": 1339,
-        "end_time": 1365,
-        "Available from": "22:19:00",
-        "Available till": "22:45:00",
-        "current_soc": 2,
-        "battery_capacity": 76,
-        "mileage": 300,
-        "vehicle_type": "3w"
+        "start_time": 374,
+        "end_time": 404,
+        "Available from": "06:14:00",
+        "Available till": "06:44:00",
+        "current_soc": 17,
+        "battery_capacity": 79,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "IEC62196Type2Outlet",
+            "GBT20234Part2",
+            "IEC62196Type1",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 63,
-        "start_time": 245,
-        "end_time": 290,
-        "Available from": "04:05:00",
-        "Available till": "04:50:00",
-        "current_soc": 16,
-        "battery_capacity": 53,
-        "mileage": 326,
-        "vehicle_type": "3w"
+        "start_time": 798,
+        "end_time": 817,
+        "Available from": "13:18:00",
+        "Available till": "13:37:00",
+        "current_soc": 18,
+        "battery_capacity": 96,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CCS",
+            "GBT20234Part3",
+            "IEC62196Type3",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 64,
-        "start_time": 419,
-        "end_time": 464,
-        "Available from": "06:59:00",
-        "Available till": "07:44:00",
-        "current_soc": 18,
-        "battery_capacity": 92,
-        "mileage": 291,
-        "vehicle_type": "4w"
+        "start_time": 463,
+        "end_time": 504,
+        "Available from": "07:43:00",
+        "Available till": "08:24:00",
+        "current_soc": 15,
+        "battery_capacity": 60,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "Chademo",
+            "GBT20234Part2",
+            "IEC62196Type3",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 65,
-        "start_time": 492,
-        "end_time": 523,
-        "Available from": "08:12:00",
-        "Available till": "08:43:00",
-        "current_soc": 9,
-        "battery_capacity": 48,
-        "mileage": 58,
-        "vehicle_type": "4w"
+        "start_time": 944,
+        "end_time": 979,
+        "Available from": "15:44:00",
+        "Available till": "16:19:00",
+        "current_soc": 7,
+        "battery_capacity": 65,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3",
+            "IEC62196Type1CCS"
+        ]
     },
     {
         "index": 66,
-        "start_time": 1121,
-        "end_time": 1138,
-        "Available from": "18:41:00",
-        "Available till": "18:58:00",
-        "current_soc": 15,
-        "battery_capacity": 67,
-        "mileage": 395,
-        "vehicle_type": "3w"
+        "start_time": 906,
+        "end_time": 936,
+        "Available from": "15:06:00",
+        "Available till": "15:36:00",
+        "current_soc": 4,
+        "battery_capacity": 43,
+        "connectors": [
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 67,
-        "start_time": 1123,
-        "end_time": 1177,
-        "Available from": "18:43:00",
-        "Available till": "19:37:00",
-        "current_soc": 7,
-        "battery_capacity": 89,
-        "mileage": 384,
-        "vehicle_type": "2w"
+        "start_time": 98,
+        "end_time": 128,
+        "Available from": "01:38:00",
+        "Available till": "02:08:00",
+        "current_soc": 17,
+        "battery_capacity": 78,
+        "connectors": [
+            "GBT20234Part2",
+            "IEC62196Type3",
+            "Chademo"
+        ]
     },
     {
         "index": 68,
-        "start_time": 436,
-        "end_time": 494,
-        "Available from": "07:16:00",
-        "Available till": "08:14:00",
-        "current_soc": 18,
-        "battery_capacity": 98,
-        "mileage": 220,
-        "vehicle_type": "3w"
+        "start_time": 661,
+        "end_time": 677,
+        "Available from": "11:01:00",
+        "Available till": "11:17:00",
+        "current_soc": 12,
+        "battery_capacity": 59,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "GBT20234Part3",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "Chademo"
+        ]
     },
     {
         "index": 69,
-        "start_time": 1403,
-        "end_time": 1423,
-        "Available from": "23:23:00",
-        "Available till": "23:43:00",
-        "current_soc": 14,
-        "battery_capacity": 46,
-        "mileage": 103,
-        "vehicle_type": "2w"
+        "start_time": 76,
+        "end_time": 121,
+        "Available from": "01:16:00",
+        "Available till": "02:01:00",
+        "current_soc": 3,
+        "battery_capacity": 82,
+        "connectors": [
+            "GBT20234Part2",
+            "IEC62196Type1CCS",
+            "IEC62196Type1",
+            "StandardHouseholdCountrySpecific",
+            "Chademo",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC60309DCWhite",
+            "IEC62196Type2Outlet",
+            "GBT20234Part3",
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 70,
-        "start_time": 1299,
-        "end_time": 1352,
-        "Available from": "21:39:00",
-        "Available till": "22:32:00",
-        "current_soc": 3,
-        "battery_capacity": 53,
-        "mileage": 360,
-        "vehicle_type": "4w"
+        "start_time": 1087,
+        "end_time": 1130,
+        "Available from": "18:07:00",
+        "Available till": "18:50:00",
+        "current_soc": 5,
+        "battery_capacity": 88,
+        "connectors": [
+            "IEC62196Type1",
+            "IEC60309AC1PhaseBlue",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 71,
-        "start_time": 222,
-        "end_time": 245,
-        "Available from": "03:42:00",
-        "Available till": "04:05:00",
-        "current_soc": 6,
-        "battery_capacity": 75,
-        "mileage": 135,
-        "vehicle_type": "2w"
+        "start_time": 402,
+        "end_time": 428,
+        "Available from": "06:42:00",
+        "Available till": "07:08:00",
+        "current_soc": 2,
+        "battery_capacity": 89,
+        "connectors": [
+            "GBT20234Part3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CableAttached",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type1CCS",
+            "IEC62196Type2Outlet",
+            "Chademo"
+        ]
     },
     {
         "index": 72,
-        "start_time": 878,
-        "end_time": 895,
-        "Available from": "14:38:00",
-        "Available till": "14:55:00",
-        "current_soc": 6,
-        "battery_capacity": 72,
-        "mileage": 278,
-        "vehicle_type": "4w"
+        "start_time": 859,
+        "end_time": 916,
+        "Available from": "14:19:00",
+        "Available till": "15:16:00",
+        "current_soc": 4,
+        "battery_capacity": 40,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "IEC60309DCWhite",
+            "GBT20234Part3",
+            "Chademo",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 73,
-        "start_time": 522,
-        "end_time": 578,
-        "Available from": "08:42:00",
-        "Available till": "09:38:00",
-        "current_soc": 13,
-        "battery_capacity": 72,
-        "mileage": 85,
-        "vehicle_type": "3w"
+        "start_time": 27,
+        "end_time": 69,
+        "Available from": "00:27:00",
+        "Available till": "01:09:00",
+        "current_soc": 10,
+        "battery_capacity": 97,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3",
+            "GBT20234Part3",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 74,
-        "start_time": 1302,
-        "end_time": 1350,
-        "Available from": "21:42:00",
-        "Available till": "22:30:00",
-        "current_soc": 17,
-        "battery_capacity": 89,
-        "mileage": 306,
-        "vehicle_type": "3w"
+        "start_time": 1082,
+        "end_time": 1105,
+        "Available from": "18:02:00",
+        "Available till": "18:25:00",
+        "current_soc": 18,
+        "battery_capacity": 76,
+        "connectors": [
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached",
+            "Chademo",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part3",
+            "IEC62196Type2CCS",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part2",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 75,
-        "start_time": 1170,
-        "end_time": 1196,
-        "Available from": "19:30:00",
-        "Available till": "19:56:00",
-        "current_soc": 14,
-        "battery_capacity": 85,
-        "mileage": 292,
-        "vehicle_type": "4w"
+        "start_time": 110,
+        "end_time": 141,
+        "Available from": "01:50:00",
+        "Available till": "02:21:00",
+        "current_soc": 17,
+        "battery_capacity": 92,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 76,
-        "start_time": 683,
-        "end_time": 726,
-        "Available from": "11:23:00",
-        "Available till": "12:06:00",
-        "current_soc": 17,
-        "battery_capacity": 68,
-        "mileage": 72,
-        "vehicle_type": "4w"
+        "start_time": 487,
+        "end_time": 528,
+        "Available from": "08:07:00",
+        "Available till": "08:48:00",
+        "current_soc": 3,
+        "battery_capacity": 93,
+        "connectors": [
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 77,
-        "start_time": 1268,
-        "end_time": 1284,
-        "Available from": "21:08:00",
-        "Available till": "21:24:00",
-        "current_soc": 16,
-        "battery_capacity": 46,
-        "mileage": 288,
-        "vehicle_type": "4w"
+        "start_time": 396,
+        "end_time": 443,
+        "Available from": "06:36:00",
+        "Available till": "07:23:00",
+        "current_soc": 15,
+        "battery_capacity": 43,
+        "connectors": [
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part3",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2CCS",
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "Chademo",
+            "IEC62196Type1",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 78,
-        "start_time": 299,
-        "end_time": 353,
-        "Available from": "04:59:00",
-        "Available till": "05:53:00",
-        "current_soc": 15,
-        "battery_capacity": 52,
-        "mileage": 122,
-        "vehicle_type": "2w"
+        "start_time": 462,
+        "end_time": 482,
+        "Available from": "07:42:00",
+        "Available till": "08:02:00",
+        "current_soc": 3,
+        "battery_capacity": 41,
+        "connectors": [
+            "Chademo",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2Outlet",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 79,
-        "start_time": 1076,
-        "end_time": 1130,
-        "Available from": "17:56:00",
-        "Available till": "18:50:00",
-        "current_soc": 6,
-        "battery_capacity": 84,
-        "mileage": 270,
-        "vehicle_type": "4w"
+        "start_time": 629,
+        "end_time": 658,
+        "Available from": "10:29:00",
+        "Available till": "10:58:00",
+        "current_soc": 14,
+        "battery_capacity": 44,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type3",
+            "GBT20234Part2",
+            "GBT20234Part3",
+            "Chademo"
+        ]
     },
     {
         "index": 80,
-        "start_time": 465,
-        "end_time": 499,
-        "Available from": "07:45:00",
-        "Available till": "08:19:00",
-        "current_soc": 19,
-        "battery_capacity": 80,
-        "mileage": 309,
-        "vehicle_type": "3w"
+        "start_time": 1293,
+        "end_time": 1332,
+        "Available from": "21:33:00",
+        "Available till": "22:12:00",
+        "current_soc": 16,
+        "battery_capacity": 60,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CCS",
+            "IEC62196Type1",
+            "IEC62196Type2Outlet",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 81,
-        "start_time": 1307,
-        "end_time": 1335,
-        "Available from": "21:47:00",
-        "Available till": "22:15:00",
-        "current_soc": 13,
-        "battery_capacity": 86,
-        "mileage": 174,
-        "vehicle_type": "3w"
+        "start_time": 490,
+        "end_time": 535,
+        "Available from": "08:10:00",
+        "Available till": "08:55:00",
+        "current_soc": 6,
+        "battery_capacity": 46,
+        "connectors": [
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 82,
-        "start_time": 487,
-        "end_time": 522,
-        "Available from": "08:07:00",
-        "Available till": "08:42:00",
-        "current_soc": 2,
-        "battery_capacity": 40,
-        "mileage": 305,
-        "vehicle_type": "2w"
+        "start_time": 750,
+        "end_time": 800,
+        "Available from": "12:30:00",
+        "Available till": "13:20:00",
+        "current_soc": 9,
+        "battery_capacity": 100,
+        "connectors": [
+            "IEC60309DCWhite",
+            "GBT20234Part3",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "Chademo",
+            "IEC62196Type1",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2Outlet",
+            "IEC62196Type2CCS",
+            "GBT20234Part2",
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 83,
-        "start_time": 135,
-        "end_time": 163,
-        "Available from": "02:15:00",
-        "Available till": "02:43:00",
-        "current_soc": 4,
-        "battery_capacity": 76,
-        "mileage": 75,
-        "vehicle_type": "2w"
+        "start_time": 10,
+        "end_time": 31,
+        "Available from": "00:10:00",
+        "Available till": "00:31:00",
+        "current_soc": 3,
+        "battery_capacity": 75,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type2CableAttached",
+            "IEC60309AC1PhaseBlue",
+            "GBT20234Part2",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309DCWhite",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC62196Type2Outlet"
+        ]
     },
     {
         "index": 84,
-        "start_time": 1030,
-        "end_time": 1048,
-        "Available from": "17:10:00",
-        "Available till": "17:28:00",
-        "current_soc": 12,
-        "battery_capacity": 69,
-        "mileage": 121,
-        "vehicle_type": "2w"
+        "start_time": 1256,
+        "end_time": 1275,
+        "Available from": "20:56:00",
+        "Available till": "21:15:00",
+        "current_soc": 20,
+        "battery_capacity": 72,
+        "connectors": [
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type1",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1CCS",
+            "Chademo",
+            "GBT20234Part2",
+            "GBT20234Part3",
+            "IEC62196Type2CCS",
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 85,
-        "start_time": 1274,
-        "end_time": 1325,
-        "Available from": "21:14:00",
-        "Available till": "22:05:00",
-        "current_soc": 9,
-        "battery_capacity": 49,
-        "mileage": 266,
-        "vehicle_type": "3w"
+        "start_time": 1215,
+        "end_time": 1234,
+        "Available from": "20:15:00",
+        "Available till": "20:34:00",
+        "current_soc": 6,
+        "battery_capacity": 71,
+        "connectors": [
+            "IEC60309DCWhite",
+            "IEC62196Type2Outlet",
+            "IEC62196Type1",
+            "IEC62196Type1CCS",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type3",
+            "Chademo",
+            "GBT20234Part2",
+            "IEC62196Type2CCS",
+            "GBT20234Part3"
+        ]
     },
     {
         "index": 86,
-        "start_time": 1041,
-        "end_time": 1094,
-        "Available from": "17:21:00",
-        "Available till": "18:14:00",
+        "start_time": 119,
+        "end_time": 151,
+        "Available from": "01:59:00",
+        "Available till": "02:31:00",
         "current_soc": 19,
-        "battery_capacity": 84,
-        "mileage": 166,
-        "vehicle_type": "3w"
+        "battery_capacity": 56,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "GBT20234Part2"
+        ]
     },
     {
         "index": 87,
-        "start_time": 55,
-        "end_time": 89,
-        "Available from": "00:55:00",
-        "Available till": "01:29:00",
-        "current_soc": 15,
-        "battery_capacity": 94,
-        "mileage": 284,
-        "vehicle_type": "2w"
+        "start_time": 1029,
+        "end_time": 1058,
+        "Available from": "17:09:00",
+        "Available till": "17:38:00",
+        "current_soc": 12,
+        "battery_capacity": 97,
+        "connectors": [
+            "GBT20234Part3",
+            "IEC62196Type2CCS",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1",
+            "GBT20234Part2",
+            "IEC62196Type3",
+            "IEC62196Type1CCS",
+            "IEC60309DCWhite",
+            "IEC62196Type2Outlet",
+            "Chademo"
+        ]
     },
     {
         "index": 88,
-        "start_time": 16,
-        "end_time": 72,
-        "Available from": "00:16:00",
-        "Available till": "01:12:00",
-        "current_soc": 8,
-        "battery_capacity": 40,
-        "mileage": 111,
-        "vehicle_type": "4w"
+        "start_time": 1050,
+        "end_time": 1089,
+        "Available from": "17:30:00",
+        "Available till": "18:09:00",
+        "current_soc": 11,
+        "battery_capacity": 87,
+        "connectors": [
+            "IEC62196Type1",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 89,
-        "start_time": 948,
-        "end_time": 989,
-        "Available from": "15:48:00",
-        "Available till": "16:29:00",
-        "current_soc": 5,
-        "battery_capacity": 86,
-        "mileage": 241,
-        "vehicle_type": "4w"
+        "start_time": 1216,
+        "end_time": 1251,
+        "Available from": "20:16:00",
+        "Available till": "20:51:00",
+        "current_soc": 13,
+        "battery_capacity": 90,
+        "connectors": [
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part2",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 90,
-        "start_time": 646,
-        "end_time": 683,
-        "Available from": "10:46:00",
-        "Available till": "11:23:00",
-        "current_soc": 6,
-        "battery_capacity": 59,
-        "mileage": 191,
-        "vehicle_type": "3w"
+        "start_time": 346,
+        "end_time": 393,
+        "Available from": "05:46:00",
+        "Available till": "06:33:00",
+        "current_soc": 5,
+        "battery_capacity": 83,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "IEC62196Type2Outlet",
+            "StandardHouseholdCountrySpecific",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC62196Type2CCS"
+        ]
     },
     {
         "index": 91,
-        "start_time": 365,
-        "end_time": 404,
-        "Available from": "06:05:00",
-        "Available till": "06:44:00",
-        "current_soc": 18,
-        "battery_capacity": 56,
-        "mileage": 64,
-        "vehicle_type": "4w"
+        "start_time": 1057,
+        "end_time": 1093,
+        "Available from": "17:37:00",
+        "Available till": "18:13:00",
+        "current_soc": 7,
+        "battery_capacity": 65,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "Chademo"
+        ]
     },
     {
         "index": 92,
-        "start_time": 675,
-        "end_time": 699,
-        "Available from": "11:15:00",
-        "Available till": "11:39:00",
-        "current_soc": 10,
-        "battery_capacity": 66,
-        "mileage": 62,
-        "vehicle_type": "2w"
+        "start_time": 686,
+        "end_time": 741,
+        "Available from": "11:26:00",
+        "Available till": "12:21:00",
+        "current_soc": 9,
+        "battery_capacity": 73,
+        "connectors": [
+            "IEC62196Type3",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309DCWhite",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2CableAttached"
+        ]
     },
     {
         "index": 93,
-        "start_time": 1093,
-        "end_time": 1152,
-        "Available from": "18:13:00",
-        "Available till": "19:12:00",
-        "current_soc": 6,
-        "battery_capacity": 66,
-        "mileage": 222,
-        "vehicle_type": "3w"
+        "start_time": 724,
+        "end_time": 754,
+        "Available from": "12:04:00",
+        "Available till": "12:34:00",
+        "current_soc": 20,
+        "battery_capacity": 63,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "IEC62196Type3",
+            "IEC60309AC1PhaseBlue"
+        ]
     },
     {
         "index": 94,
-        "start_time": 384,
-        "end_time": 441,
-        "Available from": "06:24:00",
-        "Available till": "07:21:00",
-        "current_soc": 3,
+        "start_time": 363,
+        "end_time": 382,
+        "Available from": "06:03:00",
+        "Available till": "06:22:00",
+        "current_soc": 10,
         "battery_capacity": 75,
-        "mileage": 301,
-        "vehicle_type": "3w"
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "GBT20234Part2",
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part3",
+            "IEC62196Type2CCS",
+            "IEC60309DCWhite",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type2Outlet",
+            "Chademo",
+            "IEC62196Type1"
+        ]
     },
     {
         "index": 95,
-        "start_time": 1394,
-        "end_time": 1419,
-        "Available from": "23:14:00",
-        "Available till": "23:39:00",
-        "current_soc": 8,
-        "battery_capacity": 92,
-        "mileage": 57,
-        "vehicle_type": "2w"
+        "start_time": 1157,
+        "end_time": 1202,
+        "Available from": "19:17:00",
+        "Available till": "20:02:00",
+        "current_soc": 15,
+        "battery_capacity": 74,
+        "connectors": [
+            "IEC62196Type2Outlet",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type1CCS",
+            "StandardHouseholdCountrySpecific",
+            "Chademo"
+        ]
     },
     {
         "index": 96,
-        "start_time": 462,
-        "end_time": 520,
-        "Available from": "07:42:00",
-        "Available till": "08:40:00",
-        "current_soc": 11,
-        "battery_capacity": 58,
-        "mileage": 208,
-        "vehicle_type": "4w"
+        "start_time": 903,
+        "end_time": 928,
+        "Available from": "15:03:00",
+        "Available till": "15:28:00",
+        "current_soc": 3,
+        "battery_capacity": 70,
+        "connectors": [
+            "IEC62196Type3",
+            "GBT20234Part2",
+            "IEC62196Type2CableAttached",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 97,
-        "start_time": 560,
-        "end_time": 599,
-        "Available from": "09:20:00",
-        "Available till": "09:59:00",
-        "current_soc": 15,
-        "battery_capacity": 58,
-        "mileage": 344,
-        "vehicle_type": "4w"
+        "start_time": 173,
+        "end_time": 226,
+        "Available from": "02:53:00",
+        "Available till": "03:46:00",
+        "current_soc": 17,
+        "battery_capacity": 64,
+        "connectors": [
+            "IEC62196Type2CCS",
+            "IEC60309DCWhite",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type1CCS",
+            "IEC62196Type3",
+            "IEC62196Type1",
+            "IEC62196Type2CableAttached",
+            "StandardHouseholdCountrySpecific"
+        ]
     },
     {
         "index": 98,
-        "start_time": 1203,
-        "end_time": 1261,
-        "Available from": "20:03:00",
-        "Available till": "21:01:00",
-        "current_soc": 12,
-        "battery_capacity": 47,
-        "mileage": 260,
-        "vehicle_type": "4w"
+        "start_time": 1187,
+        "end_time": 1204,
+        "Available from": "19:47:00",
+        "Available till": "20:04:00",
+        "current_soc": 18,
+        "battery_capacity": 86,
+        "connectors": [
+            "IEC62196Type1",
+            "IEC62196Type2CableAttached",
+            "IEC62196Type1CCS",
+            "GBT20234Part3",
+            "IEC62196Type3",
+            "GBT20234Part2",
+            "StandardHouseholdCountrySpecific",
+            "IEC60309AC1PhaseBlue",
+            "IEC60309DCWhite"
+        ]
     },
     {
         "index": 99,
-        "start_time": 782,
-        "end_time": 807,
-        "Available from": "13:02:00",
-        "Available till": "13:27:00",
-        "current_soc": 5,
-        "battery_capacity": 45,
-        "mileage": 357,
-        "vehicle_type": "4w"
+        "start_time": 1102,
+        "end_time": 1158,
+        "Available from": "18:22:00",
+        "Available till": "19:18:00",
+        "current_soc": 11,
+        "battery_capacity": 91,
+        "connectors": [
+            "IEC62196Type2CableAttached",
+            "IEC62196Type3",
+            "GBT20234Part3",
+            "IEC62196Type1",
+            "IEC60309DCWhite"
+        ]
     }
 ]

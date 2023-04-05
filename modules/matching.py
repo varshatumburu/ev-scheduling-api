@@ -21,7 +21,7 @@ def createGraph(requests, port_id="-1", charging_port={}):
 	for req in requests:
 		st = roundup(req['start_time'])
 		if charging_port:
-			duration = helper.find_duration(charging_port['power'], req['battery_capacity'])
+			duration = helper.find_duration(charging_port['ratedPowerKW'], req['battery_capacity'], req['soc'])
 		else: 
 			duration = req['duration']
 		# nslots = int(math.ceil(duration/SLOT_TIME))
@@ -62,10 +62,11 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 		return False
 	vis[port_id][request_id]=True
 
-	if config.CHARGING_STATIONS.empty: 
-		config.CHARGING_STATIONS = pd.read_json('datasets/charging_stations.json')
-	charging_stations = config.CHARGING_STATIONS.to_dict("records")
-	charging_requests = config.REQUESTS.to_dict("records")
+	if config.CHARGING_STATIONS.__len__==0: 
+		config.CHARGING_STATIONS = json.load(open('datasets/ev_stations.json'))
+	charging_stations = config.CHARGING_STATIONS
+	charging_requests = config.REQUESTS
+	request = config.REQUESTS[request_id]
 	# nslots = reqSlots[request_id] # number of slots required to fit
 
 	# Iterate through all ports in 1 cs, take some sorted order of ports 
@@ -74,8 +75,10 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 	if port_id=="-1":
 		possibleSlots = graph[request_id]
 	else:
-		csidx, pidx = port_id.split('p')
-		duration = helper.find_duration(charging_stations[int(csidx)]["ports"][int(pidx)]['power'], charging_requests[request_id]['battery_capacity'])
+		csidx, pidx = port_id.split('__')
+		ports = charging_stations[csidx]['chargingPark']['connectors']
+
+		duration = helper.find_duration(list(filter(lambda ports: ports['id'] == int(pidx), ports))[0]['ratedPowerKW'], request['battery_capacity'], request['soc'])
 		nslots = int(math.ceil(duration/SLOT_TIME))
 		possibleSlots = config.POSSIBLE_SLOTS[port_id][request_id]
 
@@ -94,10 +97,9 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 				# print(int(cs), slot_mapping[port_id][bs])
 				# print(charging_requests[slot_mapping[port_id][bs]])
 				if not shift:
-					shiftable_port_indices = [port["id"] for port in charging_stations[int(csidx)]["ports"]\
-						if charging_requests[request_id]["vehicle_type"] in port["vehicles"] \
-						and port["id"]!=int(pidx)]
-					sorted_port_indices = sorted(shiftable_port_indices, key= lambda x: len(charging_stations[int(csidx)]["ports"][x]["vehicles"]))
+					shiftable_port_indices = [port["id"] for port in ports\
+						if port['connectorType'] in charging_requests[request_id]['connectors'] and port["id"]!=int(pidx)]
+					sorted_port_indices = sorted(shiftable_port_indices, key= lambda x: helper.find_duration(ports[x]['ratedPowerKW'], request['battery_capacity'], request['soc']))
 					shift = sorted_port_indices
 
 				if(kuhn(slot_mapping[port_id][bs], vis, slot+nslots, slot_mapping, port_id, [], offline)):
@@ -106,7 +108,7 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 					return True
 				elif not offline: 
 					for sp in shift:
-						next_portid = csidx+"p"+str(sp)
+						next_portid = csidx+"__"+str(sp)
 						shift_reqid = slot_mapping[port_id][bs]
 						shift.remove(sp)
 						if config.POSSIBLE_SLOTS.get(next_portid)==None: config.POSSIBLE_SLOTS[next_portid]={}
@@ -128,8 +130,9 @@ def init_schedule(reqSet, port_id="-1", slot_mapping = dict(), offline=0):
 	else: config.POSSIBLE_SLOTS[port_id] = {}
 
 	requests = [req for req in global_requests if req['index'] in reqSet]
-	csno = int(port_id.split('p')[0]); portno= int(port_id.split('p')[1])
-	charging_port = config.CHARGING_STATIONS.to_dict("records")[csno]["ports"][portno]
+	cskey= port_id.split('__')[0]; portno= int(port_id.split('__')[1])
+	ports = config.CHARGING_STATIONS[cskey]['chargingPark']['connectors']
+	charging_port = list(filter(lambda ports: ports['id'] == int(portno), ports))[0]
 	selected = prebooked_scheduling(requests, charging_port)
 	requests = [req for req in requests if req['index'] in selected]
 
