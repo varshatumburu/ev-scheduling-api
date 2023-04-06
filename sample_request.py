@@ -21,10 +21,9 @@ connectors = [
             "IEC62196Type2CableAttached"]
 
 data = {
-    'start_time': 600, 
-	'end_time': 650, 
-	'cs_queue': cs_keys, 
-    'soc':10, 
+    'start_time':  [300,350,310], 
+	'end_time': [400,450,410], 
+	'cs_queue': ["dBK-On6XfGWQECVAxzUyxg","sGVHYoB-UAoUMjhgclYCDw","PcXxHxidfrpSUePHXNYb_A"], 
 	'battery_capacity':60,
     'connectors':connectors
 }

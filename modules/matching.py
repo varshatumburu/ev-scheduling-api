@@ -78,7 +78,7 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 		csidx, pidx = port_id.split('__')
 		ports = charging_stations[csidx]['chargingPark']['connectors']
 
-		duration = helper.find_duration(list(filter(lambda ports: ports['id'] == int(pidx), ports))[0]['ratedPowerKW'], request['battery_capacity'], request['soc'])
+		duration = helper.find_duration(list(filter(lambda ports: ports['id'] == int(pidx), ports))[0]['ratedPowerKW'], request['battery_capacity'])
 		nslots = int(math.ceil(duration/SLOT_TIME))
 		possibleSlots = config.POSSIBLE_SLOTS[port_id][request_id]
 
@@ -99,7 +99,7 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 				if not shift:
 					shiftable_port_indices = [port["id"] for port in ports\
 						if port['connectorType'] in charging_requests[request_id]['connectors'] and port["id"]!=int(pidx)]
-					sorted_port_indices = sorted(shiftable_port_indices, key= lambda x: helper.find_duration(ports[x]['ratedPowerKW'], request['battery_capacity'], request['soc']))
+					sorted_port_indices = sorted(shiftable_port_indices, key= lambda x: helper.find_duration(ports[x]['ratedPowerKW'], request['battery_capacity']))
 					shift = sorted_port_indices
 
 				if(kuhn(slot_mapping[port_id][bs], vis, slot+nslots, slot_mapping, port_id, [], offline)):

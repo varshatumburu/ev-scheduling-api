@@ -1,8 +1,6 @@
 
 from flask import Flask, request
 import json
-import pandas as pd
-import datetime
 import modules.matching as matching, modules.helper as helper
 import math
 from modules.scheduler import SLOT_TIME
@@ -19,7 +17,6 @@ def schedule_request():
         start_time = request_data['start_time']
         end_time = request_data['end_time']
         cs_queue = request_data['cs_queue']
-        soc = request_data['soc']
         bcap = request_data['battery_capacity']
         connectorTypes = request_data['connectors']
     
@@ -30,7 +27,7 @@ def schedule_request():
     existing_requests = json.load(open('datasets/requests.json'))
     charging_stations = json.load(open('datasets/ev_stations.json'))
     config.CHARGING_STATIONS = charging_stations
-    
+
     raw_schedule = json.load(open('datasets/slot_mapping.json'))
     raw_pslots = json.load(open('datasets/possible_slots.json'))
 
@@ -54,9 +51,9 @@ def schedule_request():
             "index": new_idx,
 			"start_time": start_time,
 			"end_time": end_time,
-            "Available from": str(datetime.time(int(start_time)//60, int(start_time)%60)),
-            "Available till": str(datetime.time(int(end_time)//60, int(end_time)%60)),
-            "soc": soc,
+            # "Available from": str(datetime.time(int(start_time)//60, int(start_time)%60)),
+            # "Available till": str(datetime.time(int(end_time)//60, int(end_time)%60)),
+            # "soc": current_soc,
             "battery_capacity": bcap,
             "connectors": connectorTypes
         }
@@ -71,13 +68,17 @@ def schedule_request():
         return json.dumps({"Error":"Scheduling Error", "Message":"No ports given in priority to schedule charging"})
     
     ports_priority = []
-    for cs_key in cs_queue:
+    stime = {}; etime={}; soc={}
+    for idx, cs_key in enumerate(cs_queue):
+        stime[cs_key] = start_time[idx]
+        etime[cs_key]=end_time[idx]
+
         ports = charging_stations[cs_key]['chargingPark']['connectors']
         q = PriorityQueue()
         for port in ports:
             # if port and vehicle specifications match
             if port['connectorType'] in connectorTypes:
-                duration = helper.find_duration(port['ratedPowerKW'], bcap, soc)
+                duration = helper.find_duration(port['ratedPowerKW'], bcap)
                 q.put((duration, port['id']))
 
         while not q.empty():
@@ -94,14 +95,14 @@ def schedule_request():
         # except:
         #     return json.dumps({"Error":"Index Error", "Message":"Charging station/ports out of index range"})
 
-        stime = helper.roundup(start_time)
+        begin = helper.roundup(stime[cs_key]); end = etime[cs_key]
         # duration = helper.find_duration(charging_port['ratedPowerKW'], bcap, soc)
         nslots = int(math.ceil(duration/SLOT_TIME))
         config.REQUIRED_SLOTS[new_idx] = nslots
         matched_slots = []
-        while stime+duration<=end_time:
-            matched_slots.append(int(stime/SLOT_TIME))
-            stime += SLOT_TIME
+        while begin+duration<=end:
+            matched_slots.append(int(begin/SLOT_TIME))
+            begin += SLOT_TIME
 
         if(config.POSSIBLE_SLOTS.get(port_id)==None):
             config.POSSIBLE_SLOTS[port_id]={}
