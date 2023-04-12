@@ -9,7 +9,10 @@ from queue import PriorityQueue
 
 app = Flask(__name__)
 
-@app.post("/")
+charging_stations = json.load(open('datasets/ev_stations.json'))
+config.CHARGING_STATIONS = charging_stations
+
+@app.post("/check")
 def schedule_request():
     try:
         request_data = request.get_json()
@@ -21,13 +24,11 @@ def schedule_request():
         connectorTypes = request_data['connectors']
     
     except: 
-        json.dumps({"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
+        return json.dumps({"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
 
     # retrieve already scheduled info/ datasets
     existing_requests = json.load(open('datasets/requests.json'))
-    charging_stations = json.load(open('datasets/ev_stations.json'))
-    config.CHARGING_STATIONS = charging_stations
-
+    cache = json.load(open('datasets/cache_slots.json'))
     raw_schedule = json.load(open('datasets/slot_mapping.json'))
     raw_pslots = json.load(open('datasets/possible_slots.json'))
 
@@ -61,7 +62,9 @@ def schedule_request():
     #updated_requests = pd.concat([new_request, existing_requests[:]]).drop_duplicates().reset_index(drop=True)
     config.REQUESTS = existing_requests
 
+    copy_sched = existing_schedule
     config.SLOT_MAPPING = existing_schedule
+
     config.POSSIBLE_SLOTS = existing_pslots
     flag=0
     if len(cs_queue)==0:
@@ -121,12 +124,14 @@ def schedule_request():
         if(matching.kuhn(new_idx, config.VISITED, 0, config.SLOT_MAPPING, port_id)):
             print(f"\n>>> REQUEST ACCEPTED! Can be accommodated in Port {port_id}")
             flag=1
-            json_object = json.dumps(config.SLOT_MAPPING, indent=4)
-            with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
+            cache[port_id] = config.SLOT_MAPPING[port_id]
+            json_object = json.dumps(cache, indent=4)
+            with open("datasets/cache_slots.json","w") as f: f.write(json_object)
 
+            config.SLOT_MAPPING = copy_sched
             updated_requests = json.dumps(config.REQUESTS, indent=4)
             with open("datasets/requests.json","w") as f: f.write(updated_requests)
-            return json.dumps({"id": new_idx, "success":flag, "port": port_id, "chargingTime": duration, "message":"request accepted"})
+            return json.dumps({"id": new_idx, "success":flag, "station_id": cs_key, "port": portno, "chargingTime": duration, "message":"request accepted"})
         else:
             config.REQUEST_MAPPING[port_id].remove(new_idx)
             # delete slots that aren't possible anymore
@@ -139,6 +144,36 @@ def schedule_request():
         with open("datasets/requests.json","w") as f: f.write(updated_requests)
 
         return json.dumps({"id": new_idx,"success":flag, "message":"request denied"})
+    
+@app.post("/confirm")
+def confirm_request():
+    try:
+        request_data = request.get_json()
 
+        request_id = request_data['request_id']
+        port_id = request_data['station_id']+'__'+request_data['port']
+
+    except:
+        return json.dumps({"Success":0,"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
+    
+    cache = json.load(open('datasets/cache_slots.json')) 
+    schedule = json.load(open('datasets/slot_mapping.json'))
+
+    try:
+        schedule[port_id] = cache[port_id]
+        del cache[port_id]
+    except:
+        return json.dumps({"Success":0,"Error":"Index Error", "Message": "Port id not initialized in cache"})
+    config.SLOT_MAPPING = schedule
+
+    json_object = json.dumps(config.SLOT_MAPPING, indent=4)
+    with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
+
+    json_object = json.dumps(cache, indent=4)
+    with open("datasets/cache_slots.json","w") as f: f.write(json_object)
+
+    return json.dumps({"Success":1, "Message":"Slots written. Success!"})
+
+    
 if __name__ == '__main__':
     app.run(debug = True)

@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'http://127.0.0.1:5000'
+url = 'http://127.0.0.1:5000/confirm'
 
 cs_keys = ['v4BtSzW6bd1j7YfRrWPLyQ',
               'qPjF-ulpKFB5u7Tr3EIwCg',
@@ -27,7 +27,14 @@ data = {
 	'battery_capacity':60,
     'connectors':connectors
 }
+
+cdata = {
+    'request_id':5,
+    'station_id': 'dBK-On6XfGWQECVAxzUyxg',
+    'port':'2'
+}
+
 headers =  {"Content-Type":"application/json"}
-x = requests.post(url, data = json.dumps(data), headers=headers)
+x = requests.post(url, data = json.dumps(cdata), headers=headers)
 
 print(x.text)
