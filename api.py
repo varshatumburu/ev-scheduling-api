@@ -64,7 +64,7 @@ def schedule_request():
 
     copy_sched = existing_schedule
     config.SLOT_MAPPING = existing_schedule
-
+    config.CACHE = cache
     config.POSSIBLE_SLOTS = existing_pslots
     flag=0
     if len(cs_queue)==0:
@@ -124,8 +124,8 @@ def schedule_request():
         if(matching.kuhn(new_idx, config.VISITED, 0, config.SLOT_MAPPING, port_id)):
             print(f"\n>>> REQUEST ACCEPTED! Can be accommodated in Port {port_id}")
             flag=1
-            cache[port_id] = config.SLOT_MAPPING[port_id]
-            json_object = json.dumps(cache, indent=4)
+            config.CACHE[port_id] = config.SLOT_MAPPING[port_id]
+            json_object = json.dumps(config.CACHE, indent=4)
             with open("datasets/cache_slots.json","w") as f: f.write(json_object)
 
             config.SLOT_MAPPING = copy_sched
@@ -165,6 +165,7 @@ def confirm_request():
     except:
         return json.dumps({"Success":0,"Error":"Index Error", "Message": "Port id not initialized in cache"})
     config.SLOT_MAPPING = schedule
+    config.CACHE = cache
 
     json_object = json.dumps(config.SLOT_MAPPING, indent=4)
     with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
