@@ -151,7 +151,7 @@ def confirm_request():
         request_data = request.get_json()
 
         request_id = request_data['request_id']
-        port_id = request_data['station_id']+'__'+request_data['port']
+        port_id = request_data['station_id']+'__'+str(request_data['port'])
 
     except:
         return json.dumps({"Success":0,"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
