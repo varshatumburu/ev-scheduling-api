@@ -149,9 +149,7 @@ def schedule_request():
 def confirm_request():
     try:
         request_data = request.get_json()
-
-        request_id = request_data['request_id']
-        port_id = request_data['station_id']+'__'+str(request_data['port'])
+        requests = request_data['requests']
 
     except:
         return json.dumps({"Success":0,"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
@@ -159,11 +157,15 @@ def confirm_request():
     cache = json.load(open('datasets/cache_slots.json')) 
     schedule = json.load(open('datasets/slot_mapping.json'))
 
-    try:
-        schedule[port_id] = cache[port_id]
-        del cache[port_id]
-    except:
-        return json.dumps({"Success":0,"Error":"Index Error", "Message": "Port id not initialized in cache"})
+    for req in requests:
+        request_id = req['request_id']
+        port_id = req['station_id']+'__'+str(req['port'])
+        try:
+            schedule[port_id] = cache[port_id]
+            del cache[port_id]
+        except:
+            return json.dumps({"Success":0,"Error":"Index Error", "Message": "Port id not initialized in cache"})
+        
     config.SLOT_MAPPING = schedule
     config.CACHE = cache
 
@@ -173,7 +175,7 @@ def confirm_request():
     json_object = json.dumps(cache, indent=4)
     with open("datasets/cache_slots.json","w") as f: f.write(json_object)
 
-    return json.dumps({"Success":1, "Message":"Slots written. Success!"})
+    return json.dumps({"Success":1, "Message":"Slots confirmed. Success!"})
 
     
 if __name__ == '__main__':

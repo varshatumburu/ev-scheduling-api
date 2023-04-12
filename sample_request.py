@@ -29,9 +29,13 @@ data = {
 }
 
 cdata = {
-    'request_id':5,
-    'station_id': 'dBK-On6XfGWQECVAxzUyxg',
-    'port':'2'
+    'requests':[
+        {
+            'request_id':6,
+            'station_id': 'dBK-On6XfGWQECVAxzUyxg',
+            'port':'2'
+        }
+    ]
 }
 
 headers =  {"Content-Type":"application/json"}
