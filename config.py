@@ -3,7 +3,6 @@
 import pandas as pd
 import sys, os
 
-CACHE = {}
 CENTER = None
 CHARGING_STATIONS=pd.DataFrame()
 CS_DROPDOWN = pd.DataFrame(columns = ['label','value'])
