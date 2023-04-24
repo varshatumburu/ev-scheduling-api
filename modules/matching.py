@@ -53,9 +53,7 @@ def printSchedule(charging_port, request=global_requests, slot_mapping=slot_mapp
 		print(f"Request {slot_mapping[key]} scheduled at {time} for {dur} mins.")
 
 def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_id="-1", shift=[], offline=0):
-	# print(request_id, start_slot, port_id, shift)
-	# if slot_mapping.get(port_id)!=None: print(slot_mapping[port_id])
-	# print(request_id, "--", port_id)
+
 	if(vis.get(port_id)==None): 
 		vis[port_id]=dict()
 	elif(vis[port_id].get(request_id)!=None):
@@ -70,7 +68,6 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 	# nslots = reqSlots[request_id] # number of slots required to fit
 
 	# Iterate through all ports in 1 cs, take some sorted order of ports 
-	# print(port_id, config.POSSIBLE_SLOTS[port_id])
 	csidx, pidx = "",""
 	if port_id=="-1":
 		possibleSlots = graph[request_id]
@@ -89,13 +86,12 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 		busy_slots = [val for val in range(slot,slot+nslots) if val in slot_mapping[port_id].keys()]
 
 		if(len(busy_slots)==0):
+			config.SCHEDULE_FIT[request_id] = (port_id, slot, nslots)
 			for i in range(nslots):
 				slot_mapping[port_id][slot+i]=request_id
 			return True
 		else:
 			for bs in busy_slots:
-				# print(int(cs), slot_mapping[port_id][bs])
-				# print(charging_requests[slot_mapping[port_id][bs]])
 				if not shift:
 					shiftable_port_indices = [port["id"] for port in ports\
 						if port['connectorType'] in charging_requests[request_id]['connectors'] and port["id"]!=int(pidx)]
@@ -103,6 +99,7 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 					shift = sorted_port_indices
 
 				if(kuhn(slot_mapping[port_id][bs], vis, slot+nslots, slot_mapping, port_id, [], offline)):
+					config.SCHEDULE_FIT[request_id] = (port_id, slot, nslots)
 					for i in range(nslots):
 						slot_mapping[port_id][slot+i]=request_id
 					return True
@@ -118,7 +115,7 @@ def kuhn(request_id, vis=dict(), start_slot=0, slot_mapping=slot_mapping, port_i
 						with open("datasets/possible_slots.json","w") as f: f.write(graphs_object)
 
 						if(kuhn(shift_reqid, vis, 0, slot_mapping, next_portid, shift)):
-							# print(slot_mapping[port_id][bs], next_portid)
+							config.SCHEDULE_FIT[request_id] = (port_id, slot, nslots)
 							for i in range(nslots):
 								slot_mapping[port_id][slot+i]=request_id
 							return True

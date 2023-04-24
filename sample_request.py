@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'http://127.0.0.1:5000/confirm'
+url = 'http://127.0.0.1:5000/check'
 
 cs_keys = ['v4BtSzW6bd1j7YfRrWPLyQ',
               'qPjF-ulpKFB5u7Tr3EIwCg',
@@ -29,16 +29,10 @@ data = {
 }
 
 cdata = {
-    'requests':[
-        {
-            'request_id':6,
-            'station_id': 'dBK-On6XfGWQECVAxzUyxg',
-            'port':'2'
-        }
-    ]
+    'request_id':[ 14 ]
 }
 
 headers =  {"Content-Type":"application/json"}
-x = requests.post(url, data = json.dumps(cdata), headers=headers)
+x = requests.post(url, data = json.dumps(data), headers=headers)
 
 print(x.text)

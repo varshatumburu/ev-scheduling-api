@@ -11,6 +11,7 @@ CS_NODES = []
 CS_POSITIONS = []
 COLUMNS = []
 DATASET = os.path.join(sys.path[0], 'datasets')
+EXPIRY_THRESHOLD = 120
 GRAPH = None
 # LOCATION = geolocator.geocode("India",timeout=None)
 N_CLICKS = 0
@@ -25,6 +26,7 @@ REQUESTS_DROPDOWN = pd.DataFrame(columns = ['label','value'])
 REQUEST_MAPPING = dict()
 REQUEST_NODES = []
 REQUIRED_SLOTS = dict()
+SCHEDULE_FIT = dict()
 SCHED_CLICKS = 0
 SLOT_MAPPING = dict()
 TOTAL_NODES = 0

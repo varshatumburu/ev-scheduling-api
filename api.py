@@ -6,11 +6,14 @@ import math
 from modules.scheduler import SLOT_TIME
 import config
 from queue import PriorityQueue
+import time
+import threading
 
 app = Flask(__name__)
 
 charging_stations = json.load(open('datasets/ev_stations.json'))
 config.CHARGING_STATIONS = charging_stations
+timers = {}
 
 @app.post("/check")
 def schedule_request():
@@ -26,9 +29,9 @@ def schedule_request():
     except: 
         return json.dumps({"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
 
-    # retrieve already scheduled info/ datasets
+    # retrieve already scheduled info/ dataset
     existing_requests = json.load(open('datasets/requests.json'))
-    cache = json.load(open('datasets/cache_slots.json'))
+    # cache = json.load(open('datasets/cache_slots.json'))
     raw_schedule = json.load(open('datasets/slot_mapping.json'))
     raw_pslots = json.load(open('datasets/possible_slots.json'))
 
@@ -48,30 +51,30 @@ def schedule_request():
     except:
         new_idx=0
 
+    print("ok")
     new_request = {
             "index": new_idx,
 			"start_time": start_time,
 			"end_time": end_time,
-            # "Available from": str(datetime.time(int(start_time)//60, int(start_time)%60)),
-            # "Available till": str(datetime.time(int(end_time)//60, int(end_time)%60)),
-            # "soc": current_soc,
             "battery_capacity": bcap,
             "connectors": connectorTypes
         }
     existing_requests.append(new_request)
-    #updated_requests = pd.concat([new_request, existing_requests[:]]).drop_duplicates().reset_index(drop=True)
     config.REQUESTS = existing_requests
+
+    timers[new_idx]=time.time()
 
     copy_sched = existing_schedule
     config.SLOT_MAPPING = existing_schedule
-    config.CACHE = cache
+    # config.CACHE = cache
     config.POSSIBLE_SLOTS = existing_pslots
     flag=0
     if len(cs_queue)==0:
         return json.dumps({"Error":"Scheduling Error", "Message":"No ports given in priority to schedule charging"})
     
     ports_priority = []
-    stime = {}; etime={}; soc={}
+    stime = {}; etime={}
+    print("ok2")
     for idx, cs_key in enumerate(cs_queue):
         stime[cs_key] = start_time[idx]
         etime[cs_key]=end_time[idx]
@@ -88,18 +91,12 @@ def schedule_request():
             (dur, portid) = q.get()
             ports_priority.append((cs_key+'__'+str(portid), dur))
 
-
+    print("ok3")
     while len(ports_priority)!=0:
         (port_id, duration) = ports_priority.pop(0)
         cs_key, portno = port_id.split('__')[0], int(port_id.split('__')[1])
-        
-        # try:
-        #     charging_port = [x for x in charging_stations[cs_key]['chargingPark']['connectors'] if x['id']==portno][0]
-        # except:
-        #     return json.dumps({"Error":"Index Error", "Message":"Charging station/ports out of index range"})
 
         begin = helper.roundup(stime[cs_key]); end = etime[cs_key]
-        # duration = helper.find_duration(charging_port['ratedPowerKW'], bcap, soc)
         nslots = int(math.ceil(duration/SLOT_TIME))
         config.REQUIRED_SLOTS[new_idx] = nslots
         matched_slots = []
@@ -124,11 +121,15 @@ def schedule_request():
         if(matching.kuhn(new_idx, config.VISITED, 0, config.SLOT_MAPPING, port_id)):
             print(f"\n>>> REQUEST ACCEPTED! Can be accommodated in Port {port_id}")
             flag=1
-            config.CACHE[port_id] = config.SLOT_MAPPING[port_id]
-            json_object = json.dumps(config.CACHE, indent=4)
-            with open("datasets/cache_slots.json","w") as f: f.write(json_object)
+            # config.CACHE[port_id] = config.SLOT_MAPPING[port_id]
+            # json_object = json.dumps(config.CACHE, indent=4)
+            # with open("datasets/cache_slots.json","w") as f: f.write(json_object)
 
-            config.SLOT_MAPPING = copy_sched
+            # config.SLOT_MAPPING = copy_sched
+
+            json_object = json.dumps(config.SLOT_MAPPING, indent=4)
+            with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
+
             updated_requests = json.dumps(config.REQUESTS, indent=4)
             with open("datasets/requests.json","w") as f: f.write(updated_requests)
             return json.dumps({"id": new_idx, "success":flag, "station_id": cs_key, "port": portno, "chargingTime": duration, "message":"request accepted"})
@@ -149,34 +150,58 @@ def schedule_request():
 def confirm_request():
     try:
         request_data = request.get_json()
-        requests = request_data['requests']
+        requests = request_data['request_id']
 
     except:
         return json.dumps({"Success":0,"Error":"Input Data Error", "Message":"Input data not given or not in JSON format"})
     
-    cache = json.load(open('datasets/cache_slots.json')) 
-    schedule = json.load(open('datasets/slot_mapping.json'))
+    # cache = json.load(open('datasets/cache_slots.json')) 
+    # schedule = json.load(open('datasets/slot_mapping.json'))
 
-    for req in requests:
-        request_id = req['request_id']
-        port_id = req['station_id']+'__'+str(req['port'])
+    for req_idx in requests:
+        # port_id = req['station_id']+'__'+str(req['port'])
         try:
-            schedule[port_id] = cache[port_id]
-            del cache[port_id]
+            del timers[req_idx]
         except:
-            return json.dumps({"Success":0,"Error":"Index Error", "Message": "Port id not initialized in cache"})
+            return json.dumps({"Success":0,"Error":"Index Error", "Message": "Request not registered."})
         
-    config.SLOT_MAPPING = schedule
-    config.CACHE = cache
+    # config.SLOT_MAPPING = schedule
+    # config.CACHE = cache
 
-    json_object = json.dumps(config.SLOT_MAPPING, indent=4)
-    with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
+    # json_object = json.dumps(config.SLOT_MAPPING, indent=4)
+    # with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
 
-    json_object = json.dumps(cache, indent=4)
-    with open("datasets/cache_slots.json","w") as f: f.write(json_object)
+    # json_object = json.dumps(cache, indent=4)
+    # with open("datasets/cache_slots.json","w") as f: f.write(json_object)
 
     return json.dumps({"Success":1, "Message":"Slots confirmed. Success!"})
 
-    
+def check_expired_requests():
+    print("Checking expired requests! 1min done")
+    fl=0; removed = []
+    for request_id, start_time in timers.items():
+        print(request_id, start_time)
+        current_time = time.time()
+        if current_time - start_time >= config.EXPIRY_THRESHOLD:
+            port_id, slot, nslots = config.SCHEDULE_FIT[request_id]
+            print(port_id, slot, nslots)
+            for i in range(nslots):
+                fl=1
+                removed.append(request_id)
+                del config.SLOT_MAPPING[port_id][slot+i]
+
+    for req in removed:
+        del timers[req]
+
+    if fl:
+        print("Writing into slots")
+        json_object = json.dumps(config.SLOT_MAPPING, indent=4)
+        with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
+
+    threading.Timer(60.0,check_expired_requests).start()
+
+check_expired_requests()
+
 if __name__ == '__main__':
+    
     app.run(debug = True)

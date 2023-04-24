@@ -174,5 +174,291 @@
             "IEC60309DCWhite",
             "IEC62196Type2CableAttached"
         ]
+    },
+    {
+        "index": 6,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 7,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 8,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 9,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 10,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 11,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 12,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 13,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 14,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 15,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 16,
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
     }
 ]
