@@ -24,7 +24,7 @@ def update_gsheet(station):
         worksheet = sheet.worksheet(station)
         worksheet.clear()
     except:
-        worksheet=sheet.add_worksheet(title=cs, rows="100", cols="10")
+        worksheet=sheet.add_worksheet(title=station, rows="100", cols="10")
 
     header_row = ['Port ID', 'Time Slot', 'Request ID']
     worksheet.append_row(header_row)
