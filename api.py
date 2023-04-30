@@ -8,12 +8,34 @@ import config
 from queue import PriorityQueue
 import time
 import threading
+import gspread
 
 app = Flask(__name__)
+client = gspread.service_account(filename="ev-scheduling-api-790eaa603b7f.json")
+sheet = client.open("EV-Schedule")
 
 charging_stations = json.load(open('datasets/ev_stations.json'))
 config.CHARGING_STATIONS = charging_stations
 timers = {}
+
+def update_gsheet(station):
+    updated_schedule = {k:v for k,v in config.SLOT_MAPPING.items() if k.startswith(station)}
+    try:
+        worksheet = sheet.worksheet(station)
+        worksheet.clear()
+    except:
+        worksheet=sheet.add_worksheet(title=cs, rows="100", cols="10")
+
+    header_row = ['Port ID', 'Time Slot', 'Request ID']
+    worksheet.append_row(header_row)
+
+    for port, schedule in updated_schedule.items():
+        cs, pt = port.split('__')
+
+        for time_slot, req_id in schedule.items():
+            worksheet.append_row([pt, time_slot, req_id])
+
+    print('Data updated!')
 
 @app.post("/check")
 def schedule_request():
@@ -115,6 +137,7 @@ def schedule_request():
         if(matching.kuhn(new_idx, config.VISITED, 0, config.SLOT_MAPPING, port_id)):
             print(f"\n>>> REQUEST ACCEPTED! Can be accommodated in Port {port_id}")
             flag=1
+            update_gsheet(port_id.split('__')[0])
 
             json_object = json.dumps(config.SLOT_MAPPING, indent=4)
             with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
@@ -154,16 +177,17 @@ def confirm_request():
 
 def check_expired_requests():
     print("Checking expired requests! 1min done")
-    fl=0; removed = []
+    fl=0; removed = []; stations = []
     for request_id, start_time in timers.items():
-        print(request_id, start_time)
+        # print(request_id, start_time)
         current_time = time.time()
         if current_time - start_time >= config.EXPIRY_THRESHOLD:
             port_id, slot, nslots = config.SCHEDULE_FIT[request_id]
-            print(port_id, slot, nslots)
+            # print(port_id, slot, nslots)
             for i in range(nslots):
                 fl=1
                 removed.append(request_id)
+                stations.append(port_id.split('__')[0])
                 del config.SLOT_MAPPING[port_id][slot+i]
 
     for req in removed:
@@ -172,6 +196,9 @@ def check_expired_requests():
 
     if fl:
         print("Removing expired slots...")
+        for st in stations:
+            update_gsheet(st)
+
         json_object = json.dumps(config.SLOT_MAPPING, indent=4)
         with open("datasets/slot_mapping.json","w") as f: f.write(json_object)
 
