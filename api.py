@@ -11,31 +11,39 @@ import threading
 import gspread
 
 app = Flask(__name__)
-client = gspread.service_account(filename="ev-scheduling-api-790eaa603b7f.json")
-sheet = client.open("EV-Schedule")
+connection = 0
+try:
+    client = gspread.service_account(filename="ev-scheduling-api-790eaa603b7f.json")
+    sheet = client.open("EV-Schedule")
+    connection = 1
+except:
+    print("Cannot connect to gsheets")
 
 charging_stations = json.load(open('datasets/ev_stations.json'))
 config.CHARGING_STATIONS = charging_stations
 timers = {}
 
 def update_gsheet(station):
-    updated_schedule = {k:v for k,v in config.SLOT_MAPPING.items() if k.startswith(station)}
-    try:
-        worksheet = sheet.worksheet(station)
-        worksheet.clear()
-    except:
-        worksheet=sheet.add_worksheet(title=station, rows="100", cols="10")
+    if(connection):
+        updated_schedule = {k:v for k,v in config.SLOT_MAPPING.items() if k.startswith(station)}
+        try:
+            worksheet = sheet.worksheet(station)
+            worksheet.clear()
+        except:
+            worksheet=sheet.add_worksheet(title=station, rows="100", cols="10")
 
-    header_row = ['Port ID', 'Time Slot', 'Request ID']
-    worksheet.append_row(header_row)
+        header_row = ['Port ID', 'Time Slot', 'Request ID']
+        worksheet.append_row(header_row)
 
-    for port, schedule in updated_schedule.items():
-        cs, pt = port.split('__')
+        for port, schedule in updated_schedule.items():
+            cs, pt = port.split('__')
 
-        for time_slot, req_id in schedule.items():
-            worksheet.append_row([pt, time_slot, req_id])
+            for time_slot, req_id in schedule.items():
+                worksheet.append_row([pt, time_slot, req_id])
 
-    print('Data updated!')
+        print('Data updated!')
+    else:
+        print("Connection to gsheets failed.")
 
 @app.post("/check")
 def schedule_request():
