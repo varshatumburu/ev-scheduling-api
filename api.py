@@ -7,6 +7,7 @@ from modules.scheduler import SLOT_TIME
 import config
 from queue import PriorityQueue
 import time
+from datetime import datetime
 import threading
 import gspread
 
@@ -32,14 +33,15 @@ def update_gsheet(station):
         except:
             worksheet=sheet.add_worksheet(title=station, rows="100", cols="10")
 
-        header_row = ['Port ID', 'Time Slot', 'Request ID']
+        header_row = ['TimeStamp', 'Port ID', 'Time Slot', 'Request ID']
         worksheet.append_row(header_row)
 
         for port, schedule in updated_schedule.items():
             cs, pt = port.split('__')
 
             for time_slot, req_id in schedule.items():
-                worksheet.append_row([pt, time_slot, req_id])
+                ts = [req['time_stamp'] for req in config.REQUESTS if req['index']==req_id][0]
+                worksheet.append_row([ts, pt, time_slot, req_id])
 
         print('Data updated!')
     else:
@@ -80,8 +82,13 @@ def schedule_request():
     except:
         new_idx=0
 
+    dt = datetime.now()
+    ts = time.mktime(dt.timetuple())
+    sp = datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    print(sp)
     new_request = {
             "index": new_idx,
+            "time_stamp": sp,
 			"start_time": start_time,
 			"end_time": end_time,
             "battery_capacity": bcap,

@@ -1,6 +1,7 @@
 [
     {
         "index": 0,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -32,6 +33,7 @@
     },
     {
         "index": 1,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -63,6 +65,7 @@
     },
     {
         "index": 2,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -94,6 +97,7 @@
     },
     {
         "index": 3,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -125,6 +129,7 @@
     },
     {
         "index": 4,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -151,6 +156,7 @@
     },
     {
         "index": 5,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -177,6 +183,7 @@
     },
     {
         "index": 6,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -203,6 +210,7 @@
     },
     {
         "index": 7,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -229,6 +237,7 @@
     },
     {
         "index": 8,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -255,6 +264,7 @@
     },
     {
         "index": 9,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -281,6 +291,7 @@
     },
     {
         "index": 10,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -307,6 +318,7 @@
     },
     {
         "index": 11,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -333,6 +345,7 @@
     },
     {
         "index": 12,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -359,6 +372,7 @@
     },
     {
         "index": 13,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -385,6 +399,7 @@
     },
     {
         "index": 14,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -411,6 +426,7 @@
     },
     {
         "index": 15,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -437,6 +453,7 @@
     },
     {
         "index": 16,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -463,6 +480,7 @@
     },
     {
         "index": 17,
+        "time_stamp": "2023-05-11 05:42:09",
         "start_time": [
             300,
             350,
@@ -489,6 +507,34 @@
     },
     {
         "index": 18,
+        "time_stamp": "2023-05-11 05:42:09",
+        "start_time": [
+            300,
+            350,
+            310
+        ],
+        "end_time": [
+            400,
+            450,
+            410
+        ],
+        "battery_capacity": 60,
+        "connectors": [
+            "StandardHouseholdCountrySpecific",
+            "GBT20234Part2",
+            "IEC60309AC1PhaseBlue",
+            "IEC62196Type3",
+            "IEC62196Type2CCS",
+            "Chademo",
+            "IEC62196Type1",
+            "GBT20234Part3",
+            "IEC60309DCWhite",
+            "IEC62196Type2CableAttached"
+        ]
+    },
+    {
+        "index": 19,
+        "time_stamp": "2023-05-11 05:46:55",
         "start_time": [
             300,
             350,
